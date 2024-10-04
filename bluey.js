@@ -114,7 +114,7 @@ const characters = [
     image: "img/jack.png",
   },
   {
-    name: "拉斯蒂 (Rusty)",
+    name: "���斯蒂 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
   },
@@ -515,7 +515,7 @@ const characters = [
     image: "img/jerrylee.png",
   },
   {
-    name: "朱尼珀的��媽 (Juniper's Mum)",
+    name: "朱尼珀的媽媽 (Juniper's Mum)",
     category: "其他角色",
     image: "img/junipersmum.png",
   },
@@ -682,7 +682,7 @@ const characters = [
     image: "img/zara.png",
   },
   {
-    name: "齊格 (Ziggy)",
+    name: "齊��� (Ziggy)",
     category: "其他角色",
     image: "img/ziggy.png",
   },
@@ -691,7 +691,7 @@ const characters = [
   {
     name: "小矮人們 (The Gnomes)",
     category: "其他角色",
-    image: "img/thegnomes.png",
+    image: "img/gnomes.png",
   },
   {
     name: "波波 (Bobo)",
