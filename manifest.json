@@ -1,0 +1,16 @@
+{
+  "name": "妙妙犬布麗角色介紹",
+  "short_name": "布麗介紹",
+  "description": "介紹妙妙犬布麗及其家人的網站",
+  "start_url": "/bluey.html",
+  "display": "standalone",
+  "background_color": "#f0f8ff",
+  "theme_color": "#1e90ff",
+  "icons": [
+    {
+      "src": "bluey-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
