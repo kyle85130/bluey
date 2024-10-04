@@ -515,7 +515,7 @@ const characters = [
     image: "img/jerrylee.png",
   },
   {
-    name: "朱尼珀的媽媽 (Juniper's Mum)",
+    name: "朱尼珀的��媽 (Juniper's Mum)",
     category: "其他角色",
     image: "img/junipersmum.png",
   },
@@ -712,13 +712,26 @@ const charactersPerPage = 40; // 显示更多角色，例如10行4列，共40个
 function createCharacterCard(character) {
   const card = document.createElement("div");
   card.className = "character-card";
-  card.innerHTML = `
-    <img src="${character.image}" alt="${character.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/150'">
-    <div class="character-info">
-      <h3>${character.name}</h3>
-      <p>${character.category}</p>
-    </div>
+
+  const img = document.createElement("img");
+  img.src = character.image; // 直接使用 character.image 中的路徑
+  img.alt = character.name;
+  img.onerror = function () {
+    console.error(`無法加載圖片: ${this.src}`);
+    this.src = "img/placeholder.png"; // 使用相對於根目錄的路徑
+    this.alt = `${character.name} (圖片無法加載)`;
+  };
+
+  const characterInfo = document.createElement("div");
+  characterInfo.className = "character-info";
+  characterInfo.innerHTML = `
+    <h3>${character.name}</h3>
+    <p>${character.category}</p>
   `;
+
+  card.appendChild(img);
+  card.appendChild(characterInfo);
+
   return card;
 }
 
@@ -748,19 +761,46 @@ function updatePagination(totalCharacters) {
   const totalPages = Math.ceil(totalCharacters / charactersPerPage);
   paginationContainer.innerHTML = "";
 
-  for (let i = 1; i <= totalPages; i++) {
-    const pageButton = document.createElement("button");
-    pageButton.textContent = i;
-    pageButton.addEventListener("click", () => {
-      currentPage = i;
-      filterAndDisplayCharacters();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-    if (i === currentPage) {
-      pageButton.classList.add("active");
-    }
-    paginationContainer.appendChild(pageButton);
+  // 只顯示當前頁碼附近的頁碼
+  const maxVisiblePages = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+  if (endPage - startPage + 1 < maxVisiblePages) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
   }
+
+  if (startPage > 1) {
+    paginationContainer.appendChild(createPageButton(1, "首頁"));
+    if (startPage > 2) {
+      paginationContainer.appendChild(document.createTextNode("..."));
+    }
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    paginationContainer.appendChild(createPageButton(i));
+  }
+
+  if (endPage < totalPages) {
+    if (endPage < totalPages - 1) {
+      paginationContainer.appendChild(document.createTextNode("..."));
+    }
+    paginationContainer.appendChild(createPageButton(totalPages, "末頁"));
+  }
+}
+
+function createPageButton(pageNum, text = pageNum) {
+  const pageButton = document.createElement("button");
+  pageButton.textContent = text;
+  pageButton.addEventListener("click", () => {
+    currentPage = pageNum;
+    filterAndDisplayCharacters();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  if (pageNum === currentPage) {
+    pageButton.classList.add("active");
+  }
+  return pageButton;
 }
 
 function filterAndDisplayCharacters() {
