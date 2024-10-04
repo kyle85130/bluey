@@ -3,318 +3,256 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>妙妙犬布麗的角色世界</title>
-    <link rel="manifest" href="manifest.json" />
-    <style>
-      /* 保留原有的樣式 */
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #87ceeb;
-      }
-      h1,
-      h2 {
-        color: #1e90ff;
-        text-align: center;
-      }
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin: 20px auto;
-      }
-      .info {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-      }
-      .character {
-        border-top: 2px solid #1e90ff;
-        padding-top: 20px;
-      }
-      .character:first-child {
-        border-top: none;
-      }
-    </style>
+    <title>妙妙犬布麗 - 角色介紹</title>
+    <link rel="stylesheet" href="BLUEY.css" />
   </head>
   <body>
-    <h1>妙妙犬布麗的角色世界</h1>
+    <header>
+      <h1>妙妙犬布麗</h1>
+      <nav>
+        <ul>
+          <li><a href="#main-characters">主要角色</a></li>
+          <li><a href="#family">家庭成員</a></li>
+          <li><a href="#friends">朋友們</a></li>
+          <li><a href="#other-characters">其他角色</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <h2>主要角色</h2>
+    <main>
+      <section id="main-characters">
+        <h2>主要角色</h2>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="images/bluey.jpg" alt="布麗" />
+            <div class="character-info">
+              <h3>布麗 (Bluey Heeler)</h3>
+              <p>
+                主角之一,藍色的澳洲牧牛犬,6歲（後來7歲）。班戈、奇莉的長女,充滿活力、想像力和好奇心。
+              </p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/bingo.jpg" alt="賓果" />
+            <div class="character-info">
+              <h3>賓果 (Bingo Heeler)</h3>
+              <p>
+                主角之一,紅色的澳洲牧牛犬,4歲（後來5歲）。班戈、奇莉的次女,布麗的妹妹。
+              </p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/bandit.jpg" alt="班戈" />
+            <div class="character-info">
+              <h3>班戈 (Bandit Heeler)</h3>
+              <p>
+                布麗和賓果的爸爸,藍色的澳洲牧牛犬。考古學家,喜歡和孩子們玩耍。
+              </p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/chilli.jpg" alt="奇莉" />
+            <div class="character-info">
+              <h3>奇莉 (Chilli Heeler)</h3>
+              <p>布麗和賓果的媽媽,紅色的澳洲牧牛犬。在機場工作,溫柔而堅強。</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="info character">
-      <h3>布麗 (Bluey)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/55/Bluey_Heeler.png"
-        alt="布麗的圖片"
-      />
+      <section id="family">
+        <h2>家庭成員</h2>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="images/muffin.jpg" alt="蜜絲" />
+            <div class="character-info">
+              <h3>蜜絲 (Muffin Heeler)</h3>
+              <p>
+                布麗和賓果的表妹,灰色的澳洲牧牛犬。活潑好動,常常加入布麗的遊戲中。
+              </p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/socks.jpg" alt="索克斯" />
+            <div class="character-info">
+              <h3>索克斯 (Socks Heeler)</h3>
+              <p>
+                布麗和賓果的表妹,蜜絲的妹妹。還是一隻小狗,正在學習說話和走路。
+              </p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/stripe.jpg" alt="斯特萊普" />
+            <div class="character-info">
+              <h3>斯特萊普 (Stripe Heeler)</h3>
+              <p>班戈的弟弟,蜜絲和索克斯的爸爸。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/trixie.jpg" alt="特里克西" />
+            <div class="character-info">
+              <h3>特里克西 (Trixie Heeler)</h3>
+              <p>斯特萊普的妻子,蜜絲和索克斯的媽媽。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/radley.jpg" alt="拉德利" />
+            <div class="character-info">
+              <h3>拉德利 (Radley Heeler)</h3>
+              <p>班戈的另一個弟弟。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/bob.jpg" alt="鮑勃" />
+            <div class="character-info">
+              <h3>鮑勃 (Bob Heeler)</h3>
+              <p>布麗和賓果的爺爺。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/chris.jpg" alt="克里斯" />
+            <div class="character-info">
+              <h3>克里斯 (Chris Heeler)</h3>
+              <p>布麗和賓果的奶奶。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/mort.jpg" alt="莫特" />
+            <div class="character-info">
+              <h3>莫特 (Mort Cattle)</h3>
+              <p>布麗和賓果的外公。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/chillismum.jpg" alt="奇莉的媽媽" />
+            <div class="character-info">
+              <h3>奇莉的媽媽 (Chilli's Mum)</h3>
+              <p>布麗和賓果的外婆。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/brandy.jpg" alt="布蘭蒂" />
+            <div class="character-info">
+              <h3>布蘭蒂 (Brandy Cattle)</h3>
+              <p>奇莉的姐妹。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="friends">
+        <h2>朋友們</h2>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="images/coco.jpg" alt="可可" />
+            <div class="character-info">
+              <h3>可可 (Coco)</h3>
+              <p>布麗的好朋友,粉紅色的貴賓犬。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/snickers.jpg" alt="小吃" />
+            <div class="character-info">
+              <h3>小吃 (Snickers)</h3>
+              <p>布麗的朋友,史納莎犬。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/mackenzie.jpg" alt="麥肯齊" />
+            <div class="character-info">
+              <h3>麥肯齊 (Mackenzie Border Collie)</h3>
+              <p>布麗的朋友,邊境牧羊犬。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/chloe.jpg" alt="克洛伊" />
+            <div class="character-info">
+              <h3>克洛伊 (Chloe)</h3>
+              <p>布麗的好朋友。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/honey.jpg" alt="哈尼" />
+            <div class="character-info">
+              <h3>哈尼 (Honey)</h3>
+              <p>布麗的朋友。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/lucky.jpg" alt="拉基" />
+            <div class="character-info">
+              <h3>拉基 (Lucky)</h3>
+              <p>布麗的朋友和鄰居。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/jack.jpg" alt="傑克" />
+            <div class="character-info">
+              <h3>傑克 (Jack Russell)</h3>
+              <p>布麗的朋友,傑克羅素梗。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/rusty.jpg" alt="拉斯蒂" />
+            <div class="character-info">
+              <h3>拉斯蒂 (Rusty)</h3>
+              <p>布麗的朋友,紅色凱爾派。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="other-characters">
+        <h2>其他角色</h2>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="images/calypso.jpg" alt="卡莉普索" />
+            <div class="character-info">
+              <h3>卡莉普索 (Calypso)</h3>
+              <p>布麗的學校老師。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/indy.jpg" alt="英迪" />
+            <div class="character-info">
+              <h3>英迪 (Indy)</h3>
+              <p>布麗的朋友。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/winton.jpg" alt="溫頓" />
+            <div class="character-info">
+              <h3>溫頓 (Winton)</h3>
+              <p>布麗的同學。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/judo.jpg" alt="朱多" />
+            <div class="character-info">
+              <h3>朱多 (Judo)</h3>
+              <p>布麗的鄰居。</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="images/wendy.jpg" alt="溫蒂" />
+            <div class="character-info">
+              <h3>溫蒂 (Wendy)</h3>
+              <p>朱多的媽媽,布麗家的鄰居。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
       <p>
-        布麗是一隻6歲的藍色澳洲牧牛犬，是動畫系列的主角。她充滿活力、富有想像力，總是喜歡和家人朋友一起玩耍和冒險。
+        &copy; 2023 妙妙犬布麗粉絲網站 | 資料來源：
+        <a
+          href="https://blueypedia.fandom.com/wiki/Category:Characters"
+          target="_blank"
+          >Bluey Wiki</a
+        >
       </p>
-      <ul>
-        <li>性格：活潑、好奇、富有想像力</li>
-        <li>愛好：玩遊戲、探索新事物</li>
-      </ul>
-    </div>
-
-    <div class="info character">
-      <h3>賓果 (Bingo)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/6/6c/Bingo.png"
-        alt="賓果的圖片"
-      />
-      <p>
-        賓果是布麗4歲的妹妹，同樣是一隻紅色的澳洲牧牛犬。她溫柔、敏感，喜歡跟隨姐姐布麗的腳步。
-      </p>
-      <ul>
-        <li>性格：溫柔、敏感、有創意</li>
-        <li>愛好：玩角色扮演遊戲、幫助他人</li>
-      </ul>
-    </div>
-
-    <div class="info character">
-      <h3>班迪 (Bandit)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/6/62/Bandit_Heeler.png"
-        alt="班迪的圖片"
-      />
-      <p>
-        班迪是布麗和賓果的爸爸，是一位考古學教授。他幽默風趣，總是願意陪女兒們玩各種有趣的遊戲。
-      </p>
-      <ul>
-        <li>職業：考古學教授</li>
-        <li>性格：幽默、有耐心、富有創意</li>
-      </ul>
-    </div>
-
-    <div class="info character">
-      <h3>琪琪 (Chilli)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/4/49/Chilli_Heeler.png"
-        alt="琪琪的圖片"
-      />
-      <p>
-        琪琪是布麗和賓果的媽媽，在機場擔任兼職海關安全檢查官。她溫柔但堅強，總是給予家人支持和鼓勵。
-      </p>
-      <ul>
-        <li>職業：兼職機場海關安全檢查官</li>
-        <li>性格：溫柔、堅強、富有同情心</li>
-      </ul>
-    </div>
-
-    <h2>家庭成員</h2>
-
-    <div class="info character">
-      <h3>曼曼 (Muffin)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/6/6f/Muffin.png"
-        alt="曼曼的圖片"
-      />
-      <p>
-        曼曼是布麗和賓果的表妹，是一隻灰色的澳洲牧牛犬。她年紀小，脾氣有時候很固執。
-      </p>
-      <ul>
-        <li>性格：固執、可愛、精力充沛</li>
-        <li>愛好：模仿大人、玩假扮遊戲</li>
-      </ul>
-    </div>
-
-    <div class="info character">
-      <h3>珊珊 (Socks)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5a/Socks.png"
-        alt="珊珊的圖片"
-      />
-      <p>
-        珊珊是曼曼的妹妹，布麗和賓果的表妹。她是一隻藍色的澳洲牧牛犬，年紀最小。
-      </p>
-    </div>
-
-    <div class="info character">
-      <h3>史踹普 (Stripe)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/52/Stripe.png"
-        alt="史踹普的圖片"
-      />
-      <p>史踹普是布麗和賓果的叔叔，曼曼和珊珊的爸爸。</p>
-    </div>
-
-    <div class="info character">
-      <h3>崔西 (Trixie)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/c/c2/Trixie.png"
-        alt="崔西的圖片"
-      />
-      <p>崔西是布麗和賓果的嬸嬸，曼曼和珊珊的媽媽。</p>
-    </div>
-
-    <div class="info character">
-      <h3>鮑伯 (Bob)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/b/b7/Bob.png"
-        alt="鮑伯的圖片"
-      />
-      <p>鮑伯是布麗和賓果的爺爺，班迪的父親。</p>
-    </div>
-
-    <div class="info character">
-      <h3>克莉絲 (Chris)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/8/8a/Chris.png"
-        alt="克莉絲的圖片"
-      />
-      <p>克莉絲是布麗和賓果的奶奶，班迪的母親。</p>
-    </div>
-
-    <div class="info character">
-      <h3>雷德利 (Radley)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/4/4a/Rad.png"
-        alt="雷德利的圖片"
-      />
-      <p>雷德利是布麗和賓果的叔叔，班迪的弟弟。他是一名石油鑽塔工程師。</p>
-    </div>
-
-    <h2>朋友</h2>
-
-    <div class="info character">
-      <h3>小幸運 (Lucky)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5a/Lucky.png"
-        alt="小幸運的圖片"
-      />
-      <p>
-        小幸運是布麗的好朋友，喜歡運動，特別是橄欖球。他經常和布麗一起玩耍。
-      </p>
-      <ul>
-        <li>性格：活潑、運動型</li>
-        <li>愛好：打橄欖球、戶外活動</li>
-      </ul>
-    </div>
-
-    <div class="info character">
-      <h3>克蘿依 (Chloe)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/a/a5/Chloe.png"
-        alt="克蘿依的圖片"
-      />
-      <p>克蘿依是布麗的摯友兼小學同學。</p>
-    </div>
-
-    <div class="info character">
-      <h3>哈妮 (Honey)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5e/Honey.png"
-        alt="哈妮的圖片"
-      />
-      <p>哈妮是布麗的小學同學。</p>
-    </div>
-
-    <div class="info character">
-      <h3>麥肯錫 (Mackenzie)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5f/Mackenzie.png"
-        alt="麥肯錫的圖片"
-      />
-      <p>麥肯錫是布麗的小學同學，是一隻邊境牧羊犬。</p>
-    </div>
-
-    <div class="info character">
-      <h3>小迪 (Rusty)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5b/Rusty.png"
-        alt="小迪的圖片"
-      />
-      <p>小迪是布麗的小學同學，來自軍人家庭。</p>
-    </div>
-
-    <div class="info character">
-      <h3>小英 (Indy)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5c/Indy.png"
-        alt="小英的圖片"
-      />
-      <p>小英是布麗的小學同學，她的家人經營無麩質蛋糕攤。</p>
-    </div>
-
-    <div class="info character">
-      <h3>可可 (Coco)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/c/c1/Coco.png"
-        alt="可可的圖片"
-      />
-      <p>可可是布麗的小學同學，是一隻粉紅色的貴賓犬。</p>
-    </div>
-
-    <div class="info character">
-      <h3>史尼克 (Snickers)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/0/0f/Snickers.png"
-        alt="史尼克的圖片"
-      />
-      <p>史尼克是布麗的小學同學，是一隻臘腸犬。</p>
-    </div>
-
-    <h2>其他角色</h2>
-
-    <div class="info character">
-      <h3>凱莉老師 (Calypso)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5d/Calypso.png"
-        alt="凱莉老師的圖片"
-      />
-      <p>凱莉老師是布麗的小學老師。</p>
-    </div>
-
-    <div class="info character">
-      <h3>拉奇 (Lucky's Dad)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5c/Pat.png"
-        alt="拉奇的圖片"
-      />
-      <p>拉奇是小幸運的爸爸，也是布麗家的鄰居。</p>
-    </div>
-
-    <div class="info character">
-      <h3>黃金獵犬老師 (Mrs. Retriever)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5e/Mrs._Retriever.png"
-        alt="黃金獵犬老師的圖片"
-      />
-      <p>黃金獵犬老師是賓果的幼兒園老師。</p>
-    </div>
-
-    <div class="info character">
-      <h3>柔柔 (Judo)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/2/2a/Judo.png"
-        alt="柔柔的圖片"
-      />
-      <p>柔柔是布麗家的鄰居，有時候會和布麗一起玩耍。</p>
-    </div>
-
-    <div class="info character">
-      <h3>傑克 (Jack)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/5/5d/Jack.png"
-        alt="傑克的圖片"
-      />
-      <p>傑克是一隻羅素㹴，是布麗的同學。他有注意力不足過動症（ADHD）。</p>
-    </div>
-
-    <div class="info character">
-      <h3>溫妮 (Winnie)</h3>
-      <img
-        src="https://static.wikia.nocookie.net/blueypedia/images/b/b1/Winnie.png"
-        alt="溫妮的圖片"
-      />
-      <p>溫妮是布麗的鄰居，是一隻達爾馬提亞犬。</p>
-    </div>
+    </footer>
   </body>
 </html>
