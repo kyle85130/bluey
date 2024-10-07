@@ -48,7 +48,7 @@ const characters = [
   },
   {
     name: "小琪 (Frisky Heeler)",
-    category: "家庭成員",
+    category: "家庭員",
     image: "img/frisky.png",
   },
   {
@@ -114,7 +114,7 @@ const characters = [
     image: "img/jack.png",
   },
   {
-    name: "���蒂 (Rusty)",
+    name: "蒂 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
   },
@@ -174,12 +174,12 @@ const characters = [
     image: "img/hercules.png",
   },
   {
-    name: "龐龐 (Pom Pom)",
+    name: "龐 (Pom Pom)",
     category: "朋友們",
     image: "img/pompom.png",
   },
   {
-    name: "梗犬兄弟 (The Terriers)",
+    name: "梗犬兄弟 (Terriers)",
     category: "朋友們",
     image: "img/terriers.png",
   },
@@ -250,15 +250,30 @@ const characters = [
     image: "img/argentineanbackpacker.png",
   },
   {
-    name: "貝拉 (Bella, Coco's Mum)",
+    name: "可可的媽媽 (Coco's Mum)",
     category: "其他角色",
-    image: "img/bellacocomum.png",
+    image: "img/cocosmum.png",
   },
-  {
-    name: "餅乾和奶油 (Biscuits & Buttermilk)",
-    category: "其他角色",
-    image: "img/biscuitsandbuttermilk.png",
-  },
+  // {
+  //   name: "餅乾 (Cookie, from Stickbird)",
+  //   category: "其他角色",
+  //   image: "img/cookiestickbird.png",
+  // },
+  // {
+  //   name: "餅乾 (Cookie, from The Sign)",
+  //   category: "其他角色",
+  //   image: "img/cookiethesign.png",
+  // },
+  // {
+  //   name: "餅乾的朋友A (Cookie's Friend A)",
+  //   category: "其他角色",
+  //   image: "img/cookiesfrienda.png",
+  // },
+  // {
+  //   name: "餅乾的朋友B (Cookie's Friend B)",
+  //   category: "其他角色",
+  //   image: "img/cookiesfriendb.png",
+  // },
   {
     name: "巴迪·鄧斯坦 (Bucky Dunstan)",
     category: "其他角色",
@@ -335,27 +350,7 @@ const characters = [
     image: "img/cinemacounterdog.png",
   },
   {
-    name: "餅乾 (Cookie, from Stickbird)",
-    category: "其他角色",
-    image: "img/cookiestickbird.png",
-  },
-  {
-    name: "餅乾 (Cookie, from The Sign)",
-    category: "其他角色",
-    image: "img/cookiethesign.png",
-  },
-  {
-    name: "餅乾的朋友A (Cookie's Friend A)",
-    category: "其他角色",
-    image: "img/cookiesfrienda.png",
-  },
-  {
-    name: "餅乾的朋友B (Cookie's Friend B)",
-    category: "其他角色",
-    image: "img/cookiesfriendb.png",
-  },
-  {
-    name: "科尼利厄斯 (Cornelius)",
+    name: "尼利厄斯 (Cornelius)",
     category: "其他角色",
     image: "img/cornelius.png",
   },
@@ -405,8 +400,8 @@ const characters = [
     image: "img/dougie.png",
   },
   {
-    name: "���吉的媽媽 (Dougie's Mum)",
-    category: "其他角色",
+    name: "道吉的媽媽 (Dougie's Mum)",
+    category: "他角色",
     image: "img/dougiesmum.png",
   },
   {
@@ -461,7 +456,7 @@ const characters = [
   },
   {
     name: "醫院小孩 (Hospital Kid)",
-    category: "其他角色",
+    category: "其他角���",
     image: "img/hospitalkid.png",
   },
   {
@@ -515,7 +510,7 @@ const characters = [
     image: "img/jerrylee.png",
   },
   {
-    name: "朱尼珀的媽 (Juniper's Mum)",
+    name: "朱���珀的媽 (Juniper's Mum)",
     category: "其他角色",
     image: "img/junipersmum.png",
   },
@@ -541,6 +536,16 @@ const characters = [
   },
 
   // 添加遗漏的角色
+  {
+    name: "麥肯齊的媽媽 (Mackenzie's Mum)",
+    category: "其他角色",
+    image: "img/mackenziesmum.png",
+    breed: "邊境牧羊犬",
+    firstAppearance: "Spy Game",
+    voiceActor: "Loren Taylor",
+    description:
+      "來自紐西蘭的邊境牧羊犬。她熱情、樂於助人，是個團隊合作者。她有時會對自己缺乏信心，但在賓果的鼓勵下，她學會了通過練習來提高自己的技能。",
+  },
   {
     name: "麥肯齊的爸爸 (Mackenzie's Dad)",
     category: "其他角色",
@@ -602,9 +607,9 @@ const characters = [
     image: "img/satnav.png",
   },
   {
-    name: "希拉 (Sheila)",
+    name: "莉拉的媽媽 (Lila's Mum)",
     category: "其他角色",
-    image: "img/sheila.png",
+    image: "img/lilasmum.png",
   },
   {
     name: "購物者 (Shopper)",
@@ -642,7 +647,7 @@ const characters = [
     image: "img/terriersmum.png",
   },
   {
-    name: "牧羊犬們 (The Sheepdogs)",
+    name: "牧羊犬們 (Sheepdogs)",
     category: "其他角色",
     image: "img/thesheepdogs.png",
   },
@@ -651,13 +656,13 @@ const characters = [
     category: "其他角色",
     image: "img/tinyc.png",
   },
+  // {
+  //   name: "卡車司機 (Truck Driver)",
+  //   category: "其他角色",
+  //   image: "img/truckdriver.png",
+  // },
   {
-    name: "卡車司機 (Truck Driver)",
-    category: "其他角色",
-    image: "img/truckdriver.png",
-  },
-  {
-    name: "獸醫柯基 (Vet Corgi)",
+    name: "獸醫柯 (Vet Corgi)",
     category: "其他角色",
     image: "img/vetcorgi.png",
   },
@@ -689,7 +694,7 @@ const characters = [
 
   // 新增的角色
   {
-    name: "小矮人們 (The Gnomes)",
+    name: "小矮人們 (Gnomes)",
     category: "其他角色",
     image: "img/gnomes.png",
   },
@@ -703,7 +708,78 @@ const characters = [
     category: "其他角色",
     image: "img/bobbilby.png",
   },
+
+  // 在其他角色列表中添加 Major Tom、Maynard 和 Marcus
+  {
+    name: "湯姆少校 (Major Tom)",
+    category: "其他角色",
+    image: "img/majortom.png",
+    description:
+      "住在玻璃屋小學隔壁的馬。他在英迪和溫頓的故事中出現，並幫助他們完善了英迪的蜂蠟雕塑。",
+  },
+  {
+    name: "梅納德 (Maynard)",
+    category: "其他角色",
+    image: "img/maynard.png",
+    description:
+      "一隻愛爾蘭獵狼犬，經常在他的碼頭房子附近釣魚。他是莫特的好朋友，也認識奇莉和她的女兒們。",
+  },
+  {
+    name: "哈尼的爸爸 (Honey's Dad)",
+    category: "其他角色",
+    image: "img/honeysdad.png",
+    description:
+      "哈尼的爸爸，來自英國。他喜歡喝下午茶，是大學講師，曾邀請班迪作為特邀演講者。",
+  },
+  {
+    name: "餅乾 (Cookie, from Stickbird)",
+    category: "其他角色",
+    image: "img/cookiestickbird.png",
+    description:
+      "一隻棕色和奶油色的幼犬，戴著粉色帽子。她在海灘上玩耍時無意中毀壞了賓果的雕塑。",
+  },
+  {
+    name: "餅乾的朋友A (Cookie's Friend A)",
+    category: "其他角色",
+    image: "img/cookiesfrienda.png",
+    description:
+      "一隻金色的拉布拉多犬幼犬，戴著藍色帽子。她是餅乾的朋友，似乎是三人小組中年齡最大的。",
+  },
+  {
+    name: "餅乾的朋友B (Cookie's Friend B)",
+    category: "其他角色",
+    image: "img/cookiesfriendb.png",
+    description: "一隻棕色的比特犬幼犬，戴著綠色水桶帽。他是餅乾的另一個朋友。",
+  },
 ];
+
+// 將這段代碼添加在角色數組定義之後
+characters.sort((a, b) => {
+  // 提取英文名稱（括號內的部分）
+  const nameA = a.name.match(/\(([^)]+)\)/)[1].toLowerCase();
+  const nameB = b.name.match(/\(([^)]+)\)/)[1].toLowerCase();
+
+  // 特殊情況：Cookie 應該排在 Cookie's Friend A 前面
+  if (nameA.startsWith("cookie") && nameB.startsWith("cookie")) {
+    if (
+      nameA === "cookie, from stickbird" &&
+      nameB.startsWith("cookie's friend")
+    ) {
+      return -1;
+    }
+    if (
+      nameB === "cookie, from stickbird" &&
+      nameA.startsWith("cookie's friend")
+    ) {
+      return 1;
+    }
+  }
+
+  // 一般情況的比較
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
 
 let currentCategory = "all";
 let currentPage = 1;
@@ -882,3 +958,71 @@ window.onerror = function (message, source, lineno, colno, error) {
   );
   return true;
 };
+
+// 添加到文件底部
+document.addEventListener("DOMContentLoaded", () => {
+  const navScroll = document.querySelector(".nav-scroll");
+  let isScrolling = false;
+
+  navScroll.addEventListener("scroll", () => {
+    isScrolling = true;
+  });
+
+  setInterval(() => {
+    if (isScrolling) {
+      isScrolling = false;
+      // 檢查是否滾動到邊緣，如果是，添加一些內邊距
+      if (
+        navScroll.scrollLeft + navScroll.clientWidth >=
+        navScroll.scrollWidth - 1
+      ) {
+        navScroll.style.paddingRight = "20px";
+      } else {
+        navScroll.style.paddingRight = "0";
+      }
+    }
+  }, 100);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navScroll = document.querySelector(".nav-scroll");
+
+  function checkScroll() {
+    if (navScroll.scrollWidth > navScroll.clientWidth) {
+      navScroll.style.justifyContent = "flex-start";
+    } else {
+      navScroll.style.justifyContent = "space-between";
+    }
+  }
+
+  // 初始檢查
+  checkScroll();
+
+  // 窗口大小改變時重新檢查
+  window.addEventListener("resize", checkScroll);
+});
+
+// 在文件底部添加以下代碼
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopButton = document.getElementById("back-to-top");
+
+  // 當用戶滾動超過200px時顯示按鈕
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+      backToTopButton.style.display = "flex";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
+
+  // 點擊按鈕時滾動到頂部
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});

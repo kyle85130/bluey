@@ -13,17 +13,20 @@
   </head>
   <body>
     <header role="banner">
-      <h1>妙妙犬布麗角色</h1>
+      <h1>
+        <span class="title-main">妙妙犬布麗</span>
+        <span class="title-sub">角色介紹</span>
+      </h1>
       <nav role="navigation" aria-label="主導航">
-        <ul>
-          <li><a href="#all" class="active">所有角色</a></li>
-          <li><a href="#main-characters">主要角色</a></li>
-          <li><a href="#family">家庭成員</a></li>
-          <li><a href="#friends">朋友們</a></li>
-          <li><a href="#school">學校相關</a></li>
-          <li><a href="#neighbors">鄰居</a></li>
-          <li><a href="#other-characters">其他角色</a></li>
-        </ul>
+        <div class="nav-scroll">
+          <a href="#all" class="active">所有角色</a>
+          <a href="#main-characters">主要角色</a>
+          <a href="#family">家庭成員</a>
+          <a href="#friends">朋友們</a>
+          <a href="#school">學校相關</a>
+          <a href="#neighbors">鄰居</a>
+          <a href="#other-characters">其他角色</a>
+        </div>
       </nav>
     </header>
 
@@ -31,6 +34,21 @@
       <input type="text" id="character-search" placeholder="搜索角色..." />
       <div id="character-grid"></div>
     </main>
+
+    <!-- 將原來的按鈕替換為以下代碼 -->
+    <button id="back-to-top" aria-label="回到頂部">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
 
     <footer role="contentinfo">
       <p>
