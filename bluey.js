@@ -48,7 +48,7 @@ const characters = [
   },
   {
     name: "小琪 (Frisky Heeler)",
-    category: "家庭員",
+    category: "家庭成員",
     image: "img/frisky.png",
   },
   {
@@ -57,7 +57,7 @@ const characters = [
     image: "img/bob.png",
   },
   {
-    name: "克里斯 (Chris Heeler)",
+    name: "克莉絲 (Chris Heeler)",
     category: "家庭成員",
     image: "img/chris.png",
   },
@@ -67,7 +67,7 @@ const characters = [
     image: "img/mort.png",
   },
   {
-    name: "奇莉的媽媽 (Chilli's Mum)",
+    name: "琪琪的媽媽 (Chilli's Mum)",
     category: "家庭成員",
     image: "img/chillismum.png",
   },
@@ -84,27 +84,22 @@ const characters = [
     image: "img/coco.png",
   },
   {
-    name: "小吃 (Snickers)",
+    name: "史尼克 (Snickers)",
     category: "朋友們",
     image: "img/snickers.png",
   },
   {
-    name: "麥肯齊 (Mackenzie Border Collie)",
-    category: "朋友們",
-    image: "img/mackenzie.png",
-  },
-  {
-    name: "克洛伊 (Chloe)",
+    name: "克蘿伊 (Chloe)",
     category: "朋友們",
     image: "img/chloe.png",
   },
   {
-    name: "哈尼 (Honey)",
+    name: "哈妮 (Honey)",
     category: "朋友們",
     image: "img/honey.png",
   },
   {
-    name: "拉基 (Lucky)",
+    name: "拉奇 (Lucky)",
     category: "朋友們",
     image: "img/lucky.png",
   },
@@ -114,113 +109,103 @@ const characters = [
     image: "img/jack.png",
   },
   {
-    name: "蒂 (Rusty)",
+    name: "小迪 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
   },
   {
-    name: "讓-盧克 (Jean-Luc)",
+    name: "皮皮 (Pretzel)",
     category: "朋友們",
-    image: "img/jeanluc.png",
+    image: "img/pretzel.png",
   },
   {
-    name: "米亞 (Mia)",
+    name: "波波 (Pom Pom)",
+    category: "朋友們",
+    image: "img/pompom.png",
+  },
+  {
+    name: "蜜絲 (Missy)",
+    category: "朋友們",
+    image: "img/missy.png",
+  },
+  {
+    name: "蜜雅 (Mia)",
     category: "朋友們",
     image: "img/mia.png",
   },
   {
-    name: "本特利 (Bentley)",
+    name: "小班莉 (Bentley)",
     category: "朋友們",
     image: "img/bentley.png",
   },
   {
-    name: "英迪 (Indy)",
+    name: "海克力 (Hercules)",
     category: "朋友們",
-    image: "img/indy.png",
+    image: "img/hercules.png",
   },
   {
-    name: "溫頓 (Winton)",
+    name: "小路 (Jean-Luc)",
     category: "朋友們",
-    image: "img/winton.png",
+    image: "img/jeanluc.png",
   },
   {
-    name: "普雷澤爾 (Pretzel)",
+    name: "小珍珍 (Juniper)",
     category: "朋友們",
-    image: "img/pretzel.png",
+    image: "img/juniper.png",
+  },
+  {
+    name: "㹴犬三兄弟 (Terriers)",
+    category: "朋友們",
+    image: "img/terriers.png",
   },
   {
     name: "巴迪 (Buddy)",
     category: "朋友們",
     image: "img/buddy.png",
   },
-  {
-    name: "莉拉 (Lila)",
-    category: "朋友們",
-    image: "img/lila.png",
-  },
-  {
-    name: "米西 (Missy)",
-    category: "朋友們",
-    image: "img/missy.png",
-  },
-  {
-    name: "朱尼珀 (Juniper)",
-    category: "朋友們",
-    image: "img/juniper.png",
-  },
-  {
-    name: "赫拉克勒斯 (Hercules)",
-    category: "朋友們",
-    image: "img/hercules.png",
-  },
-  {
-    name: "龐 (Pom Pom)",
-    category: "朋友們",
-    image: "img/pompom.png",
-  },
-  {
-    name: "梗犬兄弟 (Terriers)",
-    category: "朋友們",
-    image: "img/terriers.png",
-  },
 
   // 學校相關
   {
-    name: "莉普索 (Calypso)",
-    category: "學校相關",
+    name: "凱莉老師 (Calypso)",
+    category: "學校老師",
     image: "img/calypso.png",
   },
   {
-    name: "瑞特里弗太太 (Mrs. Retriever)",
-    category: "學校相關",
+    name: "黃金獵犬老師 (Mrs. Retriever)",
+    category: "學校老師",
     image: "img/mrsretriever.png",
   },
 
   // 鄰居
   {
-    name: "帕特 (Pat)",
+    name: "拉奇爸爸 (Lucky's Dad)",
     category: "鄰居",
     image: "img/pat.png",
   },
   {
-    name: "溫蒂 (Wendy)",
+    name: "柔柔的媽媽 (Judo's Mum)",
     category: "鄰居",
     image: "img/wendy.png",
   },
   {
-    name: "朱多 (Judo)",
+    name: "柔柔 (Judo)",
     category: "鄰居",
     image: "img/judo.png",
   },
   {
-    name: "珍妮爾 (Janelle)",
+    name: "拉奇媽媽 (Lucky's Mum)",
     category: "鄰居",
     image: "img/janelle.png",
+  },
+  {
+    name: "恰奇 (Chucky)",
+    category: "鄰居",
+    image: "img/chucky.png",
   },
 
   // 其他角色
   {
-    name: "阿爾菲 (Alfie)",
+    name: "阿飛 (Alfie)",
     category: "其他角色",
     image: "img/alfie.png",
   },
@@ -230,12 +215,12 @@ const characters = [
     image: "img/busker.png",
   },
   {
-    name: "阿爾菲的老闆 (Alfie's Boss)",
+    name: "飛老闆 (Alfie's Boss)",
     category: "其他角色",
     image: "img/alfiesboss.png",
   },
   {
-    name: "阿爾菲的媽媽 (Alfie's Mum)",
+    name: "阿飛的媽媽 (Alfie's Mum)",
     category: "其他角色",
     image: "img/alfiesmum.png",
   },
@@ -266,7 +251,7 @@ const characters = [
   // },
   // {
   //   name: "餅乾的朋友A (Cookie's Friend A)",
-  //   category: "其他角色",
+  //   category: "他角色",
   //   image: "img/cookiesfrienda.png",
   // },
   // {
@@ -275,7 +260,7 @@ const characters = [
   //   image: "img/cookiesfriendb.png",
   // },
   {
-    name: "巴迪·鄧斯坦 (Bucky Dunstan)",
+    name: "巴基 (Bucky Dunstan)",
     category: "其他角色",
     image: "img/buckydunstan.png",
   },
@@ -290,7 +275,7 @@ const characters = [
     image: "img/busstopdog.png",
   },
   {
-    name: "公車站女士 (Bus Stop Lady)",
+    name: "公車站小姐 (Bus Stop Lady)",
     category: "其他角色",
     image: "img/busstoplady.png",
   },
@@ -305,7 +290,7 @@ const characters = [
     image: "img/checkoutdog.png",
   },
   {
-    name: "帳女士 (Checkout Lady)",
+    name: "收銀員小姐 (Checkout Lady)",
     category: "其他角色",
     image: "img/checkoutlady.png",
   },
@@ -315,17 +300,17 @@ const characters = [
     image: "img/cherry.png",
   },
   {
-    name: "丘比杜比 (Chew B'Deube)",
+    name: "啾比嘟比 (Chew B'Deube)",
     category: "其他角色",
     image: "img/chewbdeube.png",
   },
   {
-    name: "奇比 (Chippy)",
+    name: "迪哥 (Digger)",
     category: "其他角色",
-    image: "img/chippy.png",
+    image: "img/digger.png",
   },
   {
-    name: "克洛伊的媽媽 (Chloe's Mum)",
+    name: "克蘿伊的媽媽 (Chloe's Mum)",
     category: "其他角色",
     image: "img/chloesmum.png",
   },
@@ -335,12 +320,7 @@ const characters = [
     image: "img/chubbles.png",
   },
   {
-    name: "查基 (Chucky)",
-    category: "其他角色",
-    image: "img/chucky.png",
-  },
-  {
-    name: "胖胖黑猩猩 (Chunky Chimp)",
+    name: "恰恰 (Chunky Chimp)",
     category: "其他角色",
     image: "img/chunkychimp.png",
   },
@@ -350,7 +330,7 @@ const characters = [
     image: "img/cinemacounterdog.png",
   },
   {
-    name: "尼利厄斯 (Cornelius)",
+    name: "柯尼利厄斯 (Cornelius)",
     category: "其他角色",
     image: "img/cornelius.png",
   },
@@ -365,12 +345,7 @@ const characters = [
     image: "img/daisy.png",
   },
   {
-    name: "挖掘機 (Digger)",
-    category: "其他角色",
-    image: "img/digger.png",
-  },
-  {
-    name: "單據男孩 (Docket Boy)",
+    name: "標價機男孩 (Docket Boy)",
     category: "其他角色",
     image: "img/docketboy.png",
   },
@@ -390,9 +365,14 @@ const characters = [
     image: "img/doctorexercise.png",
   },
   {
-    name: "多琳 (Doreen)",
+    name: "朵莉 (Doreen)",
     category: "其他角色",
     image: "img/doreen.png",
+  },
+  {
+    name: "克蘿伊的爸爸 (Chloe's Dad)",
+    category: "其他角色",
+    image: "img/frank.png",
   },
   {
     name: "道吉 (Dougie)",
@@ -415,19 +395,14 @@ const characters = [
     image: "img/employee.png",
   },
   {
-    name: "菲多 (Fido)",
-    category: "其他角色",
+    name: "法托 (Fido)",
+    category: "他角色",
     image: "img/fido.png",
   },
   {
-    name: "飛狐狸小孩 (Flying Fox Kid)",
+    name: "飛狐小子 (Flying Fox Kid)",
     category: "其他角色",
     image: "img/flyingfoxkid.png",
-  },
-  {
-    name: "弗蘭克 (Frank)",
-    category: "其他角色",
-    image: "img/frank.png",
   },
   {
     name: "法國背包客 (French Backpacker)",
@@ -435,17 +410,17 @@ const characters = [
     image: "img/frenchbackpacker.png",
   },
   {
-    name: "灰色遊牧者 (Grey Nomads)",
+    name: "銀髮遊牧族 (Grey Nomads)",
     category: "其他角色",
     image: "img/greynomads.png",
   },
   {
-    name: "格魯伯 (Gruber)",
+    name: "魯伯特 (Gruber)",
     category: "其他角色",
     image: "img/gruber.png",
   },
   {
-    name: "格魯伯的爸爸 (Gruber's Dad)",
+    name: "魯伯特的爸爸 (Gruber's Dad)",
     category: "其他角色",
     image: "img/grubersdad.png",
   },
@@ -456,7 +431,7 @@ const characters = [
   },
   {
     name: "醫院小孩 (Hospital Kid)",
-    category: "其他角���",
+    category: "其他角色",
     image: "img/hospitalkid.png",
   },
   {
@@ -470,7 +445,7 @@ const characters = [
     image: "img/icecreamlady.png",
   },
   {
-    name: "英迪的媽媽 (Indy's Mum)",
+    name: "小英的媽媽 (Indy's Mum)",
     category: "其他角色",
     image: "img/indysmum.png",
   },
@@ -485,38 +460,38 @@ const characters = [
     image: "img/jacksmum.png",
   },
   {
-    name: "賈斯珀G. (Jasper G.)",
+    name: "傑斯柏 (Jasper G.)",
     category: "其他角色",
     image: "img/jasperg.png",
   },
   {
-    name: "賈斯珀G.的媽媽 (Jasper G.'s Mum)",
+    name: "傑斯柏的媽媽 (Jasper G.'s Mum)",
     category: "其他角色",
     image: "img/jaspergsmum.png",
   },
   {
-    name: "賈斯珀W. (Jasper W.)",
+    name: "小傑 (Jasper W.)",
     category: "其他角色",
     image: "img/jasperw.png",
   },
   {
-    name: "讓-盧克的爸爸 (Jean-Luc's Dad)",
+    name: "小路的爸爸 (Jean-Luc's Dad)",
     category: "其他角色",
     image: "img/jeanlucsdad.png",
   },
   {
-    name: "傑瑞·李 (Jerry Lee)",
+    name: "傑瑞李 (Jerry Lee)",
     category: "其他角色",
     image: "img/jerrylee.png",
   },
   {
-    name: "朱���珀的媽 (Juniper's Mum)",
+    name: "朱尼珀的媽 (Juniper's Mum)",
     category: "其他角色",
     image: "img/junipersmum.png",
   },
   {
     name: "圖書管理員 (Librarian)",
-    category: "其他角色",
+    category: "其他",
     image: "img/librarian.png",
   },
   {
@@ -530,24 +505,24 @@ const characters = [
     image: "img/lilasbrother.png",
   },
   {
-    name: "露露·羅素 (Lulu Russell)",
+    name: "露露 (Lulu Russell)",
     category: "其他角色",
     image: "img/lulurussell.png",
   },
 
   // 添加遗漏的角色
   {
-    name: "麥肯齊的媽媽 (Mackenzie's Mum)",
+    name: "麥肯錫的媽媽 (Mackenzie's Mum)",
     category: "其他角色",
     image: "img/mackenziesmum.png",
     breed: "邊境牧羊犬",
     firstAppearance: "Spy Game",
     voiceActor: "Loren Taylor",
     description:
-      "來自紐西蘭的邊境牧羊犬。她熱情、樂於助人，是個團隊合作者。她有時會對自己缺乏信心，但在賓果的鼓勵下，她學會了通過練習來提高自己的技能。",
+      "來自紐西蘭的邊境牧羊犬。她熱情、樂於助人，是個團隊合作者。她有時會對自己缺乏心，但在賓果的鼓勵下，她學會了通過練習來提高自己的技能。",
   },
   {
-    name: "麥肯齊的爸爸 (Mackenzie's Dad)",
+    name: "麥肯錫的爸爸 (Mackenzie's Dad)",
     category: "其他角色",
     image: "img/mackenziesdad.png",
   },
@@ -578,11 +553,11 @@ const characters = [
   },
   {
     name: "小馬女士 (Pony Lady)",
-    category: "其他角色",
+    category: "其他",
     image: "img/ponylady.png",
   },
   {
-    name: "郵遞員 (Postie)",
+    name: "郵差 (Postie)",
     category: "其他角色",
     image: "img/postie.png",
   },
@@ -622,7 +597,7 @@ const characters = [
     image: "img/snickersmum.png",
   },
   {
-    name: "斯巴基 (Sparky)",
+    name: "斯帕克 (Sparky)",
     category: "其他角色",
     image: "img/sparky.png",
   },
@@ -642,7 +617,7 @@ const characters = [
     image: "img/takeawaylady.png",
   },
   {
-    name: "梗犬兄弟的媽媽 (Terriers' Mum)",
+    name: "㹴犬三兄弟的媽媽 (Terriers' Mum)",
     category: "其他角色",
     image: "img/terriersmum.png",
   },
@@ -652,7 +627,7 @@ const characters = [
     image: "img/thesheepdogs.png",
   },
   {
-    name: "小C. (Tiny C.)",
+    name: "小小 (Tiny C.)",
     category: "其他角色",
     image: "img/tinyc.png",
   },
@@ -662,7 +637,7 @@ const characters = [
   //   image: "img/truckdriver.png",
   // },
   {
-    name: "獸醫柯 (Vet Corgi)",
+    name: "獸醫柯基犬 (Vet Corgi)",
     category: "其他角色",
     image: "img/vetcorgi.png",
   },
@@ -682,12 +657,12 @@ const characters = [
     image: "img/yogainstructor.png",
   },
   {
-    name: "扎拉 (Zara)",
+    name: "賽拉 (Zara)",
     category: "其他角色",
     image: "img/zara.png",
   },
   {
-    name: "齊 (Ziggy)",
+    name: "齊吉 (Ziggy)",
     category: "其他角色",
     image: "img/ziggy.png",
   },
@@ -695,7 +670,7 @@ const characters = [
   // 新增的角色
   {
     name: "小矮人們 (Gnomes)",
-    category: "其他角色",
+    category: "其角色",
     image: "img/gnomes.png",
   },
   {
@@ -704,7 +679,7 @@ const characters = [
     image: "img/bobo.png",
   },
   {
-    name: "比爾比 (Bob Bilby)",
+    name: "比爾·比爾比 (Bob Bilby)",
     category: "其他角色",
     image: "img/bobbilby.png",
   },
@@ -722,14 +697,14 @@ const characters = [
     category: "其他角色",
     image: "img/maynard.png",
     description:
-      "一隻愛爾蘭獵狼犬，經常在他的碼頭房子附近釣魚。他是莫特的好朋友，也認識奇莉和她的女兒們。",
+      "一隻愛爾蘭獵狼犬，經常在他的碼頭房子附近釣魚。他是莫特的好朋友，也認識琪琪和她的女兒們。",
   },
   {
-    name: "哈尼的爸爸 (Honey's Dad)",
+    name: "哈妮的爸爸 (Honey's Dad)",
     category: "其他角色",
     image: "img/honeysdad.png",
     description:
-      "哈尼的爸爸，來自英國。他喜歡喝下午茶，是大學講師，曾邀請班迪作為特邀演講者。",
+      "哈妮的爸爸，來自英國。他喜歡喝下午茶，是大學講師，曾邀請班迪作為特邀演講者。",
   },
   {
     name: "餅乾 (Cookie, from Stickbird)",
@@ -751,10 +726,86 @@ const characters = [
     image: "img/cookiesfriendb.png",
     description: "一隻棕色的比特犬幼犬，戴著綠色水桶帽。他是餅乾的另一個朋友。",
   },
+  {
+    name: "哈妮的媽媽 (Honey's Mum)",
+    category: "其他角色",
+    image: "img/daisy.png",
+  },
+  {
+    name: "小英 (Indy)",
+    category: "朋友們",
+    image: "img/indy.png",
+    breed: "阿富汗獵犬",
+    gender: "女",
+    description:
+      "小英是布麗的好朋友之一，也是卡莉普索班上的學生。她是一個自由奔放的小女孩，喜歡音樂、跳舞、騎小馬和戶外活動。小英有非常嚴格的飲食限制，不能吃含麥麩、麩質、糖、鹽、乳製品和許多其他添加劑的食物。在學校裡，小英特別喜歡和小迪一起玩耍。雖然他們有時會對遊戲規則有不同意見，但總能一起解決分歧。小英喜歡在市場上幫助媽媽工作，總是熱心地在無麩質點心攤位幫忙。",
+    relatives: ["小英的媽媽", "unnamed father", "unnamed younger sister"],
+    friends: [
+      "可可（最好的朋友）",
+      "布麗",
+      "賓果",
+      "克蘿伊",
+      "哈妮",
+      "小迪",
+      "格魯伯",
+      "嘟嘟",
+      "史尼克",
+      "㹴犬三兄弟",
+      "麥肯錫",
+    ],
+    firstAppearance: "卡莉普索（製作順序：看醫生）",
+  },
+  {
+    name: "莉拉 (Lila)",
+    category: "朋友們",
+    image: "img/lila.png",
+    breed: "馬爾濟斯",
+    gender: "女",
+    age: "5（在《傳遞包裹》一集中）",
+    description:
+      "莉拉是一隻年輕的馬爾濟斯犬，有蓬鬆的白色毛髮。她是賓果最好的朋友。莉拉性格善良，支持所有幼兒園的同學，但有時也會害羞和猶豫。由於害羞，她曾經常獨自玩耍，但她最好的朋友賓果給了她信心，讓她變得活潑、愛玩耍。她和賓果在幼兒園一起玩「發條賓果」遊戲後成為了形影不離的好朋友。莉拉和賓果會一直是朋友，直到長大��，她們一起贏得獎杯並從學校畢業。",
+    relatives: ["希拉（媽媽）", "未命名的弟弟", "未命名的奶奶"],
+    friends: [
+      "賓果（最好的朋友）",
+      "布麗",
+      "班迪",
+      "曼曼（可能）",
+      "珊珊",
+      "恰奇",
+      "巴迪",
+      "波波",
+      "傑斯柏",
+      "蜜絲",
+    ],
+    firstAppearance: "爸爸接送",
+  },
+  {
+    name: "希拉 (Sheila)",
+    category: "其他角色",
+    image: "img/sheila.png",
+    breed: "馬爾濟斯",
+    gender: "女",
+    description:
+      "希拉是莉拉和她弟弟的媽媽。目前不知道她是否有伴侶。她是奇莉和拉奇爸爸的朋友。",
+    relatives: ["莉拉（女兒）", "未命名的兒子"],
+    friends: ["拉奇爸爸", "琪琪"],
+    firstAppearance: "爸爸接送",
+    voiceActor: "Jess Harris",
+  },
 ];
 
+// 在 characters 數組中，找到並刪除 Sheila 的條目
+const filteredCharacters = characters.filter(
+  (character) => character.name !== "希拉 (Sheila)"
+);
+
+// 如果 Sheila 有其他可能的名稱變體，也應該一併刪除，例如：
+// const characters = characters.filter(character => !character.name.includes("Sheila"));
+
+// 其餘代碼保持不變
+
 // 將這段代碼添加在角色數組定義之後
-characters.sort((a, b) => {
+filteredCharacters.sort((a, b) => {
   // 提取英文名稱（括號內的部分）
   const nameA = a.name.match(/\(([^)]+)\)/)[1].toLowerCase();
   const nameB = b.name.match(/\(([^)]+)\)/)[1].toLowerCase();
@@ -790,7 +841,7 @@ function createCharacterCard(character) {
   card.className = "character-card";
 
   const img = document.createElement("img");
-  img.src = character.image; // 直接使用 character.image 中的路徑
+  img.src = character.image; // 直接使用 character.image 的路徑
   img.alt = character.name;
   img.onerror = function () {
     console.error(`無法加載圖片: ${this.src}`);
@@ -922,7 +973,7 @@ document.querySelectorAll("nav a").forEach((link) => {
         : currentCategory === "friends"
         ? "朋友們"
         : currentCategory === "school"
-        ? "學校相關"
+        ? "學校老師" // 這裡改為 "學校老師"
         : currentCategory === "neighbors"
         ? "鄰居"
         : currentCategory === "other-characters"
@@ -1025,4 +1076,48 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth",
     });
   });
+});
+
+// 檢查並添加可能缺失的角色
+const missingCharacters = [
+  {
+    name: "嘟嘟 (Winton)",
+    category: "朋友們",
+    image: "img/winton.png",
+  },
+  {
+    name: "小迪 (Rusty)",
+    category: "朋友們",
+    image: "img/rusty.png",
+  },
+  {
+    name: "可可 (Coco)",
+    category: "朋友們",
+    image: "img/coco.png",
+  },
+  {
+    name: "麥肯錫 (Mackenzie)",
+    category: "朋友們",
+    image: "img/mackenzie.png",
+  },
+  {
+    name: "小琪 (Frisky Heeler)",
+    category: "家庭成員",
+    image: "img/frisky.png",
+  },
+  // 添加其他可能缺失的角色...
+];
+
+// 檢查每個可能缺失的角色，如果不在 characters 數組中，就添加它
+missingCharacters.forEach((character) => {
+  if (!characters.some((c) => c.name === character.name)) {
+    characters.push(character);
+  }
+});
+
+// 重新排序 characters 數組
+characters.sort((a, b) => {
+  const nameA = a.name.match(/\(([^)]+)\)/)[1].toLowerCase();
+  const nameB = b.name.match(/\(([^)]+)\)/)[1].toLowerCase();
+  return nameA.localeCompare(nameB);
 });
