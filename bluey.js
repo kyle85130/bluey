@@ -13,11 +13,13 @@ const characters = [
     name: "班迪 (Bandit Heeler)",
     category: "主要角色",
     image: "img/bandit.png",
+    description: "布麗、賓果的爸爸",
   },
   {
     name: "琪琪 (Chilli Heeler)",
     category: "主要角色",
     image: "img/chilli.png",
+    description: "布麗、賓果的媽媽",
   },
 
   // 家庭成员
@@ -67,7 +69,7 @@ const characters = [
     image: "img/mort.png",
   },
   {
-    name: "琪琪的媽媽 (Chilli's Mum)",
+    name: "莫夫人 (Chilli's Mum)",
     category: "家庭成員",
     image: "img/chillismum.png",
   },
@@ -79,14 +81,58 @@ const characters = [
 
   // 朋友們
   {
+    name: "小迪 (Rusty)",
+    category: "朋友們",
+    image: "img/rusty.png",
+    description: "布麗的同學",
+  },
+  {
     name: "可可 (Coco)",
     category: "朋友們",
     image: "img/coco.png",
+    description: "布麗的同學",
+  },
+  {
+    name: "麥肯錫 (Mackenzie)",
+    category: "朋友們",
+    image: "img/mackenzie.png",
+    description: "布麗的同學",
+  },
+  {
+    name: "小英 (Indy)",
+    category: "朋友們",
+    image: "img/indy.png",
+    description: "布麗的同學",
   },
   {
     name: "史尼克 (Snickers)",
     category: "朋友們",
     image: "img/snickers.png",
+    description: "布麗的同學",
+  },
+  {
+    name: "哈妮 (Honey)",
+    category: "朋友們",
+    image: "img/honey.png",
+    description: "布麗的同學",
+  },
+  {
+    name: "傑克 (Jack Russell)",
+    category: "朋友們",
+    image: "img/jack.png",
+    description: "布麗的同學",
+  },
+  {
+    name: "㹴犬三兄弟 (Terriers)",
+    category: "朋友們",
+    image: "img/terriers.png",
+    description: "布麗的同學",
+  },
+  {
+    name: "皮皮 (Pretzel)",
+    category: "朋友們",
+    image: "img/pretzel.png",
+    description: "布麗的同學",
   },
   {
     name: "克蘿伊 (Chloe)",
@@ -94,29 +140,15 @@ const characters = [
     image: "img/chloe.png",
   },
   {
-    name: "哈妮 (Honey)",
+    name: "嘟嘟 (Winton)",
     category: "朋友們",
-    image: "img/honey.png",
+    image: "img/winton.png",
+    description: "布麗的同學",
   },
   {
     name: "拉奇 (Lucky)",
-    category: "朋友們",
+    category: "鄰居", // 將 "朋友們" 改為 "鄰居"
     image: "img/lucky.png",
-  },
-  {
-    name: "傑克 (Jack Russell)",
-    category: "朋友們",
-    image: "img/jack.png",
-  },
-  {
-    name: "小迪 (Rusty)",
-    category: "朋友們",
-    image: "img/rusty.png",
-  },
-  {
-    name: "皮皮 (Pretzel)",
-    category: "朋友們",
-    image: "img/pretzel.png",
   },
   {
     name: "波波 (Pom Pom)",
@@ -127,6 +159,7 @@ const characters = [
     name: "蜜絲 (Missy)",
     category: "朋友們",
     image: "img/missy.png",
+    description: "賓果的同學",
   },
   {
     name: "蜜雅 (Mia)",
@@ -137,6 +170,7 @@ const characters = [
     name: "小班莉 (Bentley)",
     category: "朋友們",
     image: "img/bentley.png",
+    description: "賓果的同學",
   },
   {
     name: "海克力 (Hercules)",
@@ -149,19 +183,15 @@ const characters = [
     image: "img/jeanluc.png",
   },
   {
-    name: "小珍珍 (Juniper)",
-    category: "朋友們",
-    image: "img/juniper.png",
-  },
-  {
-    name: "㹴犬三兄弟 (Terriers)",
-    category: "朋友們",
-    image: "img/terriers.png",
+    name: "小珍珍媽媽 (Juniper's Mum)",
+    category: "其他角色",
+    image: "img/junipersmum.png",
   },
   {
     name: "巴迪 (Buddy)",
     category: "朋友們",
     image: "img/buddy.png",
+    description: "賓果的同學",
   },
 
   // 學校相關
@@ -193,7 +223,7 @@ const characters = [
     image: "img/judo.png",
   },
   {
-    name: "拉奇媽媽 (Lucky's Mum)",
+    name: "拉媽媽 (Lucky's Mum)",
     category: "鄰居",
     image: "img/janelle.png",
   },
@@ -315,12 +345,12 @@ const characters = [
     image: "img/chloesmum.png",
   },
   {
-    name: "丘布爾斯 (Chubbles)",
+    name: "恰恰 (Chubbles)",
     category: "其他角色",
     image: "img/chubbles.png",
   },
   {
-    name: "恰恰 (Chunky Chimp)",
+    name: "巧吉 (Chunky Chimp)",
     category: "其他角色",
     image: "img/chunkychimp.png",
   },
@@ -338,11 +368,6 @@ const characters = [
     name: "顧客 (Customer)",
     category: "其他角色",
     image: "img/customer.png",
-  },
-  {
-    name: "黛西 (Daisy)",
-    category: "其他角色",
-    image: "img/daisy.png",
   },
   {
     name: "標價機男孩 (Docket Boy)",
@@ -395,8 +420,8 @@ const characters = [
     image: "img/employee.png",
   },
   {
-    name: "法托 (Fido)",
-    category: "他角色",
+    name: "溫妮爸爸 (Winnie's Dad)",
+    category: "其他角色",
     image: "img/fido.png",
   },
   {
@@ -428,6 +453,7 @@ const characters = [
     name: "哈利 (Harley)",
     category: "其他角色",
     image: "img/harley.png",
+    description: "賓果的同學",
   },
   {
     name: "醫院小孩 (Hospital Kid)",
@@ -451,11 +477,11 @@ const characters = [
   },
   {
     name: "傑克的爸爸 (Jack's Dad)",
-    category: "其他角色",
+    category: "其他色",
     image: "img/jacksdad.png",
   },
   {
-    name: "傑克的媽媽 (Jack's Mum)",
+    name: "傑克的媽 (Jack's Mum)",
     category: "其他角色",
     image: "img/jacksmum.png",
   },
@@ -463,6 +489,7 @@ const characters = [
     name: "傑斯柏 (Jasper G.)",
     category: "其他角色",
     image: "img/jasperg.png",
+    description: "賓果的同學",
   },
   {
     name: "傑斯柏的媽媽 (Jasper G.'s Mum)",
@@ -473,6 +500,7 @@ const characters = [
     name: "小傑 (Jasper W.)",
     category: "其他角色",
     image: "img/jasperw.png",
+    description: "賓果的同學",
   },
   {
     name: "小路的爸爸 (Jean-Luc's Dad)",
@@ -485,11 +513,6 @@ const characters = [
     image: "img/jerrylee.png",
   },
   {
-    name: "朱尼珀的媽 (Juniper's Mum)",
-    category: "其他角色",
-    image: "img/junipersmum.png",
-  },
-  {
     name: "圖書管理員 (Librarian)",
     category: "其他",
     image: "img/librarian.png",
@@ -500,7 +523,7 @@ const characters = [
     image: "img/librarydog.png",
   },
   {
-    name: "莉拉的哥哥 (Lila's Brother)",
+    name: "莉拉的弟弟 (Lila's Brother)",
     category: "其他角色",
     image: "img/lilasbrother.png",
   },
@@ -648,7 +671,7 @@ const characters = [
   },
   {
     name: "溫妮 (Winnie)",
-    category: "其他角色",
+    category: "朋友們",
     image: "img/winnie.png",
   },
   {
@@ -660,6 +683,7 @@ const characters = [
     name: "賽拉 (Zara)",
     category: "其他角色",
     image: "img/zara.png",
+    description: "賓果的同學",
   },
   {
     name: "齊吉 (Ziggy)",
@@ -689,42 +713,31 @@ const characters = [
     name: "湯姆少校 (Major Tom)",
     category: "其他角色",
     image: "img/majortom.png",
-    description:
-      "住在玻璃屋小學隔壁的馬。他在英迪和溫頓的故事中出現，並幫助他們完善了英迪的蜂蠟雕塑。",
   },
   {
     name: "梅納德 (Maynard)",
     category: "其他角色",
     image: "img/maynard.png",
-    description:
-      "一隻愛爾蘭獵狼犬，經常在他的碼頭房子附近釣魚。他是莫特的好朋友，也認識琪琪和她的女兒們。",
   },
   {
     name: "哈妮的爸爸 (Honey's Dad)",
     category: "其他角色",
     image: "img/honeysdad.png",
-    description:
-      "哈妮的爸爸，來自英國。他喜歡喝下午茶，是大學講師，曾邀請班迪作為特邀演講者。",
   },
   {
     name: "餅乾 (Cookie, from Stickbird)",
     category: "其他角色",
     image: "img/cookiestickbird.png",
-    description:
-      "一隻棕色和奶油色的幼犬，戴著粉色帽子。她在海灘上玩耍時無意中毀壞了賓果的雕塑。",
   },
   {
     name: "餅乾的朋友A (Cookie's Friend A)",
     category: "其他角色",
     image: "img/cookiesfrienda.png",
-    description:
-      "一隻金色的拉布拉多犬幼犬，戴著藍色帽子。她是餅乾的朋友，似乎是三人小組中年齡最大的。",
   },
   {
     name: "餅乾的朋友B (Cookie's Friend B)",
     category: "其他角色",
     image: "img/cookiesfriendb.png",
-    description: "一隻棕色的比特犬幼犬，戴著綠色水桶帽。他是餅乾的另一個朋友。",
   },
   {
     name: "哈妮的媽媽 (Honey's Mum)",
@@ -732,65 +745,25 @@ const characters = [
     image: "img/daisy.png",
   },
   {
-    name: "小英 (Indy)",
-    category: "朋友們",
-    image: "img/indy.png",
-    breed: "阿富汗獵犬",
-    gender: "女",
-    description:
-      "小英是布麗的好朋友之一，也是卡莉普索班上的學生。她是一個自由奔放的小女孩，喜歡音樂、跳舞、騎小馬和戶外活動。小英有非常嚴格的飲食限制，不能吃含麥麩、麩質、糖、鹽、乳製品和許多其他添加劑的食物。在學校裡，小英特別喜歡和小迪一起玩耍。雖然他們有時會對遊戲規則有不同意見，但總能一起解決分歧。小英喜歡在市場上幫助媽媽工作，總是熱心地在無麩質點心攤位幫忙。",
-    relatives: ["小英的媽媽", "unnamed father", "unnamed younger sister"],
-    friends: [
-      "可可（最好的朋友）",
-      "布麗",
-      "賓果",
-      "克蘿伊",
-      "哈妮",
-      "小迪",
-      "格魯伯",
-      "嘟嘟",
-      "史尼克",
-      "㹴犬三兄弟",
-      "麥肯錫",
-    ],
-    firstAppearance: "卡莉普索（製作順序：看醫生）",
-  },
-  {
     name: "莉拉 (Lila)",
     category: "朋友們",
     image: "img/lila.png",
-    breed: "馬爾濟斯",
-    gender: "女",
-    age: "5（在《傳遞包裹》一集中）",
-    description:
-      "莉拉是一隻年輕的馬爾濟斯犬，有蓬鬆的白色毛髮。她是賓果最好的朋友。莉拉性格善良，支持所有幼兒園的同學，但有時也會害羞和猶豫。由於害羞，她曾經常獨自玩耍，但她最好的朋友賓果給了她信心，讓她變得活潑、愛玩耍。她和賓果在幼兒園一起玩「發條賓果」遊戲後成為了形影不離的好朋友。莉拉和賓果會一直是朋友，直到長大��，她們一起贏得獎杯並從學校畢業。",
-    relatives: ["希拉（媽媽）", "未命名的弟弟", "未命名的奶奶"],
-    friends: [
-      "賓果（最好的朋友）",
-      "布麗",
-      "班迪",
-      "曼曼（可能）",
-      "珊珊",
-      "恰奇",
-      "巴迪",
-      "波波",
-      "傑斯柏",
-      "蜜絲",
-    ],
-    firstAppearance: "爸爸接送",
   },
   {
     name: "希拉 (Sheila)",
     category: "其他角色",
     image: "img/sheila.png",
-    breed: "馬爾濟斯",
-    gender: "女",
-    description:
-      "希拉是莉拉和她弟弟的媽媽。目前不知道她是否有伴侶。她是奇莉和拉奇爸爸的朋友。",
-    relatives: ["莉拉（女兒）", "未命名的兒子"],
-    friends: ["拉奇爸爸", "琪琪"],
-    firstAppearance: "爸爸接送",
-    voiceActor: "Jess Harris",
+  },
+  {
+    name: "曲丕 (Chippy)",
+    category: "其他角色",
+    image: "img/chippy.png",
+  },
+  {
+    name: "小珍珍 (Juniper)",
+    category: "朋友們",
+    image: "img/juniper.png",
+    description: "賓果的同學",
   },
 ];
 
@@ -834,18 +807,18 @@ filteredCharacters.sort((a, b) => {
 
 let currentCategory = "all";
 let currentPage = 1;
-const charactersPerPage = 40; // 显示更多角色，例如10行4列，共40个角色
+const charactersPerPage = 40; // 顯示更多角色，例如10行4列，共40個角色
 
 function createCharacterCard(character) {
   const card = document.createElement("div");
   card.className = "character-card";
 
   const img = document.createElement("img");
-  img.src = character.image; // 直接使用 character.image 的路徑
+  img.src = character.image;
   img.alt = character.name;
   img.onerror = function () {
     console.error(`無法加載圖片: ${this.src}`);
-    this.src = "img/placeholder.png"; // 使用相對於根目錄的路徑
+    this.src = "img/placeholder.png";
     this.alt = `${character.name} (圖片無法加載)`;
   };
 
@@ -853,7 +826,12 @@ function createCharacterCard(character) {
   characterInfo.className = "character-info";
   characterInfo.innerHTML = `
     <h3>${character.name}</h3>
-    <p>${character.category}</p>
+    ${
+      character.description
+        ? `<p class="description"><strong>${character.description}</strong></p>`
+        : ""
+    }
+    <p class="category">${character.category}</p>
   `;
 
   card.appendChild(img);
@@ -984,7 +962,7 @@ document.querySelectorAll("nav a").forEach((link) => {
   });
 });
 
-// 確保 DOM 加載完成後正確初始化顯示所有角色和分頁
+// 確保 DOM 加載完成後確初始化顯示所有角色和分頁
 document.addEventListener("DOMContentLoaded", () => {
   currentCategory = "all";
   filterAndDisplayCharacters();
