@@ -703,7 +703,7 @@ const characters = [
     image: "img/bobo.png",
   },
   {
-    name: "比爾·比爾比 (Bob Bilby)",
+    name: "小布布 (Bob Bilby)",
     category: "其他角色",
     image: "img/bobbilby.png",
   },
