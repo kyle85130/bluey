@@ -114,7 +114,7 @@ const characters = [
     image: "img/jack.png",
   },
   {
-    name: "���斯蒂 (Rusty)",
+    name: "���蒂 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
   },
@@ -405,7 +405,7 @@ const characters = [
     image: "img/dougie.png",
   },
   {
-    name: "道吉的媽媽 (Dougie's Mum)",
+    name: "���吉的媽媽 (Dougie's Mum)",
     category: "其他角色",
     image: "img/dougiesmum.png",
   },
@@ -515,7 +515,7 @@ const characters = [
     image: "img/jerrylee.png",
   },
   {
-    name: "朱尼珀的媽媽 (Juniper's Mum)",
+    name: "朱尼珀的媽 (Juniper's Mum)",
     category: "其他角色",
     image: "img/junipersmum.png",
   },
@@ -682,7 +682,7 @@ const characters = [
     image: "img/zara.png",
   },
   {
-    name: "齊��� (Ziggy)",
+    name: "齊 (Ziggy)",
     category: "其他角色",
     image: "img/ziggy.png",
   },
@@ -750,12 +750,12 @@ function displayCharacters(filteredCharacters) {
 }
 
 function updatePagination(totalCharacters) {
-  const paginationContainer = document.getElementById("pagination");
+  let paginationContainer = document.getElementById("pagination");
   if (!paginationContainer) {
     const main = document.querySelector("main");
-    const paginationDiv = document.createElement("div");
-    paginationDiv.id = "pagination";
-    main.appendChild(paginationDiv);
+    paginationContainer = document.createElement("div");
+    paginationContainer.id = "pagination";
+    main.appendChild(paginationContainer);
   }
 
   const totalPages = Math.ceil(totalCharacters / charactersPerPage);
@@ -804,15 +804,19 @@ function createPageButton(pageNum, text = pageNum) {
 }
 
 function filterAndDisplayCharacters() {
-  const searchTerm = document
-    .getElementById("character-search")
-    .value.toLowerCase();
-  const filteredCharacters = characters.filter(
-    (character) =>
-      (currentCategory === "all" || character.category === currentCategory) &&
-      character.name.toLowerCase().includes(searchTerm)
-  );
-  displayCharacters(filteredCharacters);
+  try {
+    const searchTerm = document
+      .getElementById("character-search")
+      .value.toLowerCase();
+    const filteredCharacters = characters.filter(
+      (character) =>
+        (currentCategory === "all" || character.category === currentCategory) &&
+        character.name.toLowerCase().includes(searchTerm)
+    );
+    displayCharacters(filteredCharacters);
+  } catch (error) {
+    console.error("Error in filterAndDisplayCharacters:", error);
+  }
 }
 
 function filterCharacters() {
@@ -863,3 +867,18 @@ document.addEventListener("DOMContentLoaded", () => {
     allCharactersLink.classList.add("active");
   }
 });
+
+// 在文件底部添加：
+window.onerror = function (message, source, lineno, colno, error) {
+  console.error(
+    "Global error:",
+    message,
+    "at",
+    source,
+    ":",
+    lineno,
+    ":",
+    colno
+  );
+  return true;
+};
