@@ -1080,9 +1080,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.scrollTop > 200 ||
       document.documentElement.scrollTop > 200
     ) {
-      backToTopButton.style.display = "flex";
+      backToTopButton.classList.add("show");
     } else {
-      backToTopButton.style.display = "none";
+      backToTopButton.classList.remove("show");
     }
   };
 

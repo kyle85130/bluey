@@ -7,6 +7,7 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #413f66;
+  font-size: 16px;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem; /* 從 3rem 增加到 3.5rem */
   margin: 0;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(65, 63, 102, 0.1);
@@ -33,26 +34,26 @@ h1 {
 
 .title-sub {
   display: block;
-  font-size: 2rem;
+  font-size: 2.3rem; /* 從 2rem 增加到 2.3rem */
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* 從 2.5rem 增加到 3rem */
   }
 
   .title-sub {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* 從 1.5rem 增加到 1.8rem */
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* 從 2rem 增加到 2.5rem */
   }
 
   .title-sub {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /*  1.2rem 增加到 1.5rem */
   }
 }
 
@@ -171,7 +172,7 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
-  padding: 0; /* 移除內邊距 */
+  padding: 0; /* 移除內邊 */
   align-items: stretch; /* 確保所有卡片高度一致 */
 }
 
@@ -239,28 +240,51 @@ footer a:hover {
 
 @media (max-width: 600px) {
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0 5px; /* 減少左右內邊距 */
   }
 
   #character-search {
-    max-width: 90%;
+    width: calc(100% - 10px);
+    max-width: 98%; /* 增加最大寬度 */
     margin-left: auto;
     margin-right: auto;
   }
 
   #character-grid {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: calc(100% - 10px);
+    max-width: 98%; /* 增加最大寬度 */
     margin-left: auto;
     margin-right: auto;
   }
 
   .character-card {
-    max-width: 300px;
+    width: 100%;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* 更小螢幕的調整 */
+@media (max-width: 400px) {
+  main {
+    padding: 0 3px; /* 進一步減少左右內邊距 */
+  }
+
+  #character-search,
+  #character-grid {
+    width: calc(100% - 6px);
+    max-width: 99%; /* 進一步增加最大寬度 */
+  }
+
+  .character-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .character-card img {
+    height: 220px; /* 增加圖片高度 */
   }
 }
 
@@ -343,23 +367,26 @@ nav a.active {
 #back-to-top {
   display: none; /* 初始狀態為隱藏 */
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;
   background-color: #8dc4ec;
   color: #413f66;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   font-size: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#back-to-top.show {
+  display: flex; /* 當添加 'show' 類時顯示 */
 }
 
 #back-to-top:hover {
@@ -369,15 +396,15 @@ nav a.active {
 }
 
 #back-to-top svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 /* 手機版的樣式調整 */
 @media (max-width: 768px) {
   #back-to-top {
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     width: 40px;
     height: 40px;
   }
@@ -391,8 +418,8 @@ nav a.active {
 /* 更小螢幕的調整 */
 @media (max-width: 400px) {
   #back-to-top {
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
     width: 35px;
     height: 35px;
   }
@@ -406,4 +433,63 @@ nav a.active {
 /* 只為家庭成員使用粗體描述 */
 .character-card[data-category="家庭員"] .character-info .description {
   font-weight: bold;
+}
+
+/* 平板樣式 */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .character-info h3 {
+    font-size: 18px;
+  }
+
+  .character-info .description {
+    font-size: 15px;
+  }
+
+  .character-info .category {
+    font-size: 13px;
+  }
+}
+
+/* 手機樣式 */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px; /* 從 14px 增加到 15px */
+  }
+
+  .character-info h3 {
+    font-size: 18px; /* 從 16px 增加到 18px */
+  }
+
+  .character-info .description {
+    font-size: 16px; /* 從 14px 增加到 16px */
+  }
+
+  .character-info .category {
+    font-size: 14px; /* 從 12px 增加到 14px */
+  }
+
+  nav a {
+    font-size: 16px; /* 從 18px 減小到 16px */
+    padding: 6px 10px; /* 稍微減少內邊距以適應更小的字體 */
+  }
+}
+
+/* 更小螢幕的調整 */
+@media (max-width: 400px) {
+  nav a {
+    font-size: 14px; /* 對於更小的螢幕，進一步減小字體大小 */
+    padding: 5px 8px; /* 進一步減少內邊距 */
+  }
+
+  .character-card {
+    max-width: 280px; /* 稍微增加卡片寬度 */
+  }
+
+  .character-card img {
+    height: 200px; /* 稍微減少圖片高度 */
+  }
 }
