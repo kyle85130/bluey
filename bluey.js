@@ -95,7 +95,7 @@ const characters = [
     name: "小迪 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
-    description: "布麗的同學",
+    description: "麗的同學",
   },
   {
     name: "可可 (Coco)",
@@ -321,7 +321,7 @@ const characters = [
   },
   {
     name: "公車站小姐 (Bus Stop Lady)",
-    category: "其他角色",
+    category: "其他角",
     image: "img/busstoplady.png",
   },
   {
@@ -581,7 +581,7 @@ const characters = [
   },
   {
     name: "警察 (Policeman)",
-    category: "其他角色",
+    category: "其他角",
     image: "img/policeman.png",
   },
   {
@@ -882,7 +882,7 @@ function createCharacterCard(character) {
   return card;
 }
 
-// 添加打開模態框的函數
+// 修改打開模態框的函數
 function openModal(character) {
   const modal = document.getElementById("character-modal");
   const modalContent = document.getElementById("modal-character-info");
@@ -890,31 +890,46 @@ function openModal(character) {
   // 填充模態框內容
   modalContent.innerHTML = `
     <img src="${character.image}" alt="${character.name}">
-    <h2>${character.name}</h2>
-    <p><strong>類別:</strong> ${character.category}</p>
-    ${
-      character.description
-        ? `<p><strong>描述:</strong> ${character.description}</p>`
-        : ""
-    }
-    ${character.breed ? `<p><strong>品種:</strong> ${character.breed}</p>` : ""}
-    ${
-      character.firstAppearance
-        ? `<p><strong>首次出現:</strong> ${character.firstAppearance}</p>`
-        : ""
-    }
-    ${
-      character.voiceActor
-        ? `<p><strong>配音演員:</strong> ${character.voiceActor}</p>`
-        : ""
-    }
+    <div class="character-details">
+      <h2>${character.name}</h2>
+      <p><strong>類別:</strong> <span class="category-tag">${
+        character.category
+      }</span></p>
+      ${
+        character.description
+          ? `<p><strong>描述:</strong> ${character.description}</p>`
+          : ""
+      }
+      ${
+        character.breed
+          ? `<p><strong>品種:</strong> ${character.breed}</p>`
+          : ""
+      }
+      ${
+        character.firstAppearance
+          ? `<p><strong>首次出現:</strong> ${character.firstAppearance}</p>`
+          : ""
+      }
+      ${
+        character.voiceActor
+          ? `<p><strong>配音演員:</strong> ${character.voiceActor}</p>`
+          : ""
+      }
+    </div>
   `;
 
   // 顯示模態框
   modal.style.display = "block";
+
+  // 防止點擊模態框內容時關閉
+  modal
+    .querySelector(".modal-content")
+    .addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
 }
 
-// 添加關閉模態框的函數
+// 修改關閉模態框的函數
 function closeModal() {
   const modal = document.getElementById("character-modal");
   modal.style.display = "none";
@@ -1052,17 +1067,9 @@ document.addEventListener("DOMContentLoaded", () => {
     allCharactersLink.classList.add("active");
   }
 
-  // 為關閉按鈕添加事件監聽器
-  const closeBtn = document.querySelector(".close");
-  closeBtn.addEventListener("click", closeModal);
-
-  // 點擊模態框外部也可以關閉
-  window.addEventListener("click", (event) => {
-    const modal = document.getElementById("character-modal");
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
+  // 點擊模態框外部關閉
+  const modal = document.getElementById("character-modal");
+  modal.addEventListener("click", closeModal);
 });
 
 // 在文檔底部添加：
