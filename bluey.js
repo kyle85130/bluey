@@ -234,7 +234,7 @@ const characters = [
     image: "img/judo.png",
   },
   {
-    name: "拉媽媽 (Lucky's Mum)",
+    name: "拉奇媽媽 (Lucky's Mum)",
     category: "鄰居",
     image: "img/janelle.png",
   },
@@ -242,6 +242,7 @@ const characters = [
     name: "恰奇 (Chucky)",
     category: "鄰居",
     image: "img/chucky.png",
+    description: "拉奇的弟弟",
   },
 
   // 其他角色
