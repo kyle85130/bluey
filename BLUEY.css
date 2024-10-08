@@ -623,7 +623,7 @@ nav a.active {
 @media (max-width: 768px) {
   .modal-content {
     width: 100vw;
-    height: 56.25vw; /* 16:9 比例 */
+    height: 56.25vw; /* 16:9 比例 (9/16 = 0.5625) */
     margin: 0;
     padding: 0;
     border-radius: 0;
@@ -639,45 +639,60 @@ nav a.active {
   }
 
   #modal-character-info {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
     width: 100%;
     height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
   #modal-character-info img {
-    width: 40%;
+    width: 40%; /* 圖片佔 40% */
     height: 100%;
     object-fit: contain;
     margin: 0;
   }
 
   .character-details {
-    width: 58%;
+    width: 60%; /* 文字佔 60% */
     height: 100%;
     overflow-y: auto;
     padding: 10px;
     margin: 0;
     background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   #modal-character-info h2 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
   }
 
   #modal-character-info p {
     font-size: 0.9rem;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     z-index: 1001;
+    font-size: 1.5rem;
+    color: #413f66;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
 }
 
@@ -688,7 +703,7 @@ nav a.active {
   }
 
   #modal-character-info h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   #modal-character-info p {
