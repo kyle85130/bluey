@@ -149,6 +149,7 @@ const characters = [
     name: "克蘿伊 (Chloe)",
     category: "朋友們",
     image: "img/chloe.png",
+    description: "布麗的好友",
   },
   {
     name: "嘟嘟 (Winton)",
