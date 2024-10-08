@@ -251,6 +251,7 @@ const characters = [
     name: "阿飛 (Alfie)",
     category: "其他角色",
     image: "img/alfie.png",
+    description: "玩具店店員",
   },
   {
     name: "街頭藝人 (Busker)",
@@ -261,6 +262,7 @@ const characters = [
     name: "飛老闆 (Alfie's Boss)",
     category: "其他角色",
     image: "img/alfiesboss.png",
+    description: "玩具店老闆",
   },
   {
     name: "阿飛的媽媽 (Alfie's Mum)",
