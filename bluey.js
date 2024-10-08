@@ -1070,31 +1070,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", checkScroll);
 });
 
-// 在文件底部添加以下代碼
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTopButton = document.getElementById("back-to-top");
-
-  // 當用戶滾動超過200px時顯示按鈕
-  window.onscroll = function () {
-    if (
-      document.body.scrollTop > 200 ||
-      document.documentElement.scrollTop > 200
-    ) {
-      backToTopButton.classList.add("show");
-    } else {
-      backToTopButton.classList.remove("show");
-    }
-  };
-
-  // 點擊按鈕時滾動到頂部
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-});
-
 // 檢查並添加可能缺失的角色
 const missingCharacters = [
   {

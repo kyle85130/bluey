@@ -241,42 +241,37 @@ footer a:hover {
 
 @media (max-width: 600px) {
   main {
-    padding: 0 5px; /* 減少左右內邊距 */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #character-search {
-    width: calc(100% - 10px);
-    max-width: 98%; /* 增加最大寬度 */
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    max-width: 90%;
+    margin: 15px auto;
   }
 
   #character-grid {
     grid-template-columns: 1fr;
-    width: calc(100% - 10px);
-    max-width: 98%; /* 增加最大寬度 */
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .character-card {
     width: 100%;
     max-width: none;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
 /* 更小螢幕的調整 */
 @media (max-width: 400px) {
-  main {
-    padding: 0 3px; /* 進一步減少左右內邊距 */
-  }
-
   #character-search,
   #character-grid {
-    width: calc(100% - 6px);
-    max-width: 95%; /* 進一步增加最大寬度 */
+    width: 90%;
+    max-width: 90%;
   }
 
   .character-card {
@@ -285,7 +280,7 @@ footer a:hover {
   }
 
   .character-card img {
-    height: 220px; /* 增加圖片高度 */
+    height: 200px;
   }
 }
 
@@ -365,72 +360,6 @@ nav a.active {
   background-color: #f1f1f1;
 }
 
-#back-to-top {
-  display: none; /* 初始狀態為隱藏 */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #8dc4ec;
-  color: #413f66;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.3s;
-  justify-content: center;
-  align-items: center;
-}
-
-#back-to-top.show {
-  display: flex; /* 當添加 'show' 類時顯示 */
-}
-
-#back-to-top:hover {
-  background-color: #413f66;
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
-#back-to-top svg {
-  width: 24px;
-  height: 24px;
-}
-
-/* 手機版的樣式調整 */
-@media (max-width: 768px) {
-  #back-to-top {
-    bottom: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-  }
-
-  #back-to-top svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* 更小螢幕的調整 */
-@media (max-width: 400px) {
-  #back-to-top {
-    bottom: 10px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-  }
-
-  #back-to-top svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
 /* 只為家庭成員使用粗體描述 */
 .character-card[data-category="家庭員"] .character-info .description {
   font-weight: bold;
@@ -487,7 +416,7 @@ nav a.active {
   }
 
   .character-card {
-    max-width: 280px; /* 稍微增���卡片寬度 */
+    max-width: 280px; /* 稍微增卡片寬度 */
   }
 
   .character-card img {
