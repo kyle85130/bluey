@@ -349,6 +349,12 @@ nav a.active {
   align-items: center;
 }
 
+#back-to-top:hover {
+  background-color: #413f66;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
 #back-to-top svg {
   width: 30px;
   height: 30px;
