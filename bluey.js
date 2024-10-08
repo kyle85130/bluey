@@ -876,7 +876,48 @@ function createCharacterCard(character) {
   card.appendChild(img);
   card.appendChild(characterInfo);
 
+  // 添加點擊事件來打開模態框
+  card.addEventListener("click", () => openModal(character));
+
   return card;
+}
+
+// 添加打開模態框的函數
+function openModal(character) {
+  const modal = document.getElementById("character-modal");
+  const modalContent = document.getElementById("modal-character-info");
+
+  // 填充模態框內容
+  modalContent.innerHTML = `
+    <img src="${character.image}" alt="${character.name}">
+    <h2>${character.name}</h2>
+    <p><strong>類別:</strong> ${character.category}</p>
+    ${
+      character.description
+        ? `<p><strong>描述:</strong> ${character.description}</p>`
+        : ""
+    }
+    ${character.breed ? `<p><strong>品種:</strong> ${character.breed}</p>` : ""}
+    ${
+      character.firstAppearance
+        ? `<p><strong>首次出現:</strong> ${character.firstAppearance}</p>`
+        : ""
+    }
+    ${
+      character.voiceActor
+        ? `<p><strong>配音演員:</strong> ${character.voiceActor}</p>`
+        : ""
+    }
+  `;
+
+  // 顯示模態框
+  modal.style.display = "block";
+}
+
+// 添加關閉模態框的函數
+function closeModal() {
+  const modal = document.getElementById("character-modal");
+  modal.style.display = "none";
 }
 
 function displayCharacters(filteredCharacters) {
@@ -1010,9 +1051,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (allCharactersLink) {
     allCharactersLink.classList.add("active");
   }
+
+  // 為關閉按鈕添加事件監聽器
+  const closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", closeModal);
+
+  // 點擊模態框外部也可以關閉
+  window.addEventListener("click", (event) => {
+    const modal = document.getElementById("character-modal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 });
 
-// 在文件底部添加：
+// 在文檔底部添加：
 window.onerror = function (message, source, lineno, colno, error) {
   console.error(
     "Global error:",
