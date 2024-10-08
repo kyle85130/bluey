@@ -27,56 +27,67 @@ const characters = [
     name: "曼曼 (Muffin Heeler)",
     category: "家庭成員",
     image: "img/muffin.png",
+    description: "珊珊的姐姐",
   },
   {
     name: "珊珊 (Socks Heeler)",
     category: "家庭成員",
     image: "img/socks.png",
+    description: "曼曼的妹妹",
   },
   {
     name: "史踹普 (Stripe Heeler)",
     category: "家庭成員",
     image: "img/stripe.png",
+    description: "班迪的弟弟, 曼曼、珊珊的爸爸",
   },
   {
     name: "崔西 (Trixie Heeler)",
     category: "家庭成員",
     image: "img/trixie.png",
+    description: "曼曼、珊珊的媽媽",
   },
   {
     name: "雷德利 (Radley Heeler)",
     category: "家庭成員",
     image: "img/radley.png",
+    description: "班迪、史踹普的弟弟",
   },
   {
     name: "小琪 (Frisky Heeler)",
     category: "家庭成員",
     image: "img/frisky.png",
+    description: "雷德利的妻子",
   },
   {
     name: "鮑勃 (Bob Heeler)",
     category: "家庭成員",
     image: "img/bob.png",
+    description: "布麗的爺爺",
   },
   {
     name: "克莉絲 (Chris Heeler)",
     category: "家庭成員",
     image: "img/chris.png",
+    description: "布麗的奶奶",
   },
   {
     name: "莫特 (Mort Cattle)",
     category: "家庭成員",
     image: "img/mort.png",
+    description: "布麗的外公",
   },
   {
     name: "莫夫人 (Chilli's Mum)",
     category: "家庭成員",
     image: "img/chillismum.png",
+    description: "布麗的外婆",
   },
   {
     name: "布蘭蒂 (Brandy Cattle)",
     category: "家庭成員",
     image: "img/brandy.png",
+    description: "琪琪的姐姐",
   },
 
   // 朋友們
@@ -336,7 +347,7 @@ const characters = [
   },
   {
     name: "迪哥 (Digger)",
-    category: "其他角色",
+    category: "他角色",
     image: "img/digger.png",
   },
   {
@@ -765,6 +776,34 @@ const characters = [
     image: "img/juniper.png",
     description: "賓果的同學",
   },
+
+  // 在 characters 數組的適當位置添加以下新角色
+
+  // 添加 Floppy (皮皮)
+  {
+    name: "皮皮 (Floppy)",
+    category: "其他角色",
+    image: "img/floppy.png",
+    description: "賓果最喜歡的玩具兔子",
+  },
+
+  // 添加 Bartlebee
+  {
+    name: "巴特比 (Bartlebee)",
+    category: "其他角色",
+    image: "img/bartlebee.png",
+    description: "布麗在聖誕節收到的大玩偶",
+  },
+
+  // 添加 Unicorse
+  {
+    name: "獨角獸 (Unicorse)",
+    category: "其他角色",
+    image: "img/unicorse.png",
+    description: "世界上最調皮和最煩人的獨角獸",
+  },
+
+  // ... 其他現有的角色保持不變 ...
 ];
 
 // 在 characters 數組中，找到並刪除 Sheila 的條目
