@@ -851,6 +851,7 @@ const charactersPerPage = 40; // 顯示更多角色，例如10行4列，共40個
 function createCharacterCard(character) {
   const card = document.createElement("div");
   card.className = "character-card";
+  card.setAttribute("data-category", character.category); // 添加這行
 
   const img = document.createElement("img");
   img.src = character.image;
@@ -867,7 +868,7 @@ function createCharacterCard(character) {
     <h3>${character.name}</h3>
     ${
       character.description
-        ? `<p class="description"><strong>${character.description}</strong></p>`
+        ? `<p class="description">${character.description}</p>`
         : ""
     }
     <p class="category">${character.category}</p>
