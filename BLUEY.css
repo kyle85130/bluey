@@ -330,16 +330,16 @@ nav a.active {
 #back-to-top {
   display: none; /* 初始狀態為隱藏 */
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;
+  right: 40px;
   z-index: 99;
   border: none;
   outline: none;
   background-color: #8dc4ec;
   color: #413f66;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   font-size: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -349,29 +349,38 @@ nav a.active {
   align-items: center;
 }
 
-#back-to-top:hover {
-  background-color: #413f66;
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
 #back-to-top svg {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
-/* 為大屏幕添加一些額外的樣式 */
-@media (min-width: 769px) {
+/* 手機版的樣式調整 */
+@media (max-width: 768px) {
   #back-to-top {
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
   }
 
   #back-to-top svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 更小螢幕的調整 */
+@media (max-width: 400px) {
+  #back-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  #back-to-top svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
