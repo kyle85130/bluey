@@ -127,7 +127,7 @@ main {
 }
 
 .character-card {
-  background-color: rgba(255, 255, 255, 0.7); /* 將角色卡片背景改為半透明 */
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(65, 63, 102, 0.1);
@@ -136,7 +136,7 @@ main {
   display: flex;
   flex-direction: column;
   border: 3px solid #8dc4ec;
-  height: auto; /* 改為自動高度 */
+  height: 320px; /* 設定固定高度 */
 }
 
 .character-card:hover {
@@ -146,7 +146,7 @@ main {
 
 .character-card img {
   width: 100%;
-  height: 220px; /* 固定高度 */
+  height: 220px; /* 保持固定高度 */
   object-fit: contain;
   background-color: #f0f8ff;
   transition: transform 0.3s ease;
@@ -157,44 +157,45 @@ main {
 }
 
 .character-info {
-  padding: 10px 12px 12px; /* 上方內邊距減少，下方保持不變 */
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  background-color: rgba(141, 196, 236, 0.7); /* 將角色信息背景改為半透 */
+  justify-content: space-between;
+  background-color: rgba(141, 196, 236, 0.7);
   color: #413f66;
-  flex: 1; /* 讓資訊區域填滿剩餘空間 */
+  flex: 1;
+  overflow: hidden; /* 防止內容溢出 */
 }
 
 .character-info h3 {
-  margin-top: 0; /* 移除頂部邊距 */
-  margin-bottom: 4px;
-  font-size: 20px; /* 增加字體大小 */
-}
-
-.character-info .description {
-  font-size: 16px; /* 增加描述文本的字體大小 */
-  margin-top: 3px;
-  margin-bottom: 3px;
-  font-weight: normal;
+  margin: 0;
+  font-size: 16px; /* 稍微減小字體大小 */
+  line-height: 1.2;
+  max-height: 2.4em; /* 限制為兩行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .character-info .category {
-  font-size: 14px; /* 增加類別的字體大小 */
-  color: #666;
+  font-size: 14px;
+  color: #413f66;
+  margin-top: 5px;
 }
 
-.character-info p {
-  margin: 5px 0 0;
-  font-size: 1rem; /* 稍微增加字體大小 */
-}
+/* 移除 .description 相關的樣式 */
 
 #character-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* 使用 auto-fill 和 minmax */
   gap: 15px;
-  padding: 0; /* 移內邊 */
-  align-items: stretch; /* 確保所有卡片高度一致 */
+  padding: 0;
+  align-items: stretch;
 }
 
 footer {
@@ -320,34 +321,40 @@ footer a:hover {
 }
 
 nav {
-  background-color: transparent; /* 將整個導航區域的背景設為透明 */
+  background-color: transparent;
   padding: 5px 0;
   margin-bottom: 20px;
-  overflow: hidden; /* 防止導航欄溢出 */
+  overflow: hidden;
+  width: calc(100% - 30px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-scroll {
   display: flex;
-  justify-content: flex-start; /* 改為左對齊 */
+  justify-content: flex-start;
   align-items: center;
   padding: 5px 15px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(248, 249, 250, 0.8);
-  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.7); /* 與搜尋欄背景顏色一致 */
+  border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  white-space: nowrap; /* 確保內容不換行 */
-  max-width: 100%; /* 確保不超過父容器寬度 */
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  border: 3px solid #413f66; /* 與搜尋欄邊框一致 */
 }
 
 nav a {
   color: #495057;
   text-decoration: none;
-  padding: 10px 15px;
-  margin: 0 5px;
+  padding: 8px 12px;
+  margin: 0 2px;
   white-space: nowrap;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 18px;
+  font-size: 17px; /* 從 16px 增加 17px */
   font-weight: bold;
   border-radius: 20px;
 }
@@ -374,21 +381,42 @@ nav a.active {
 
 /* 媒體查詢調整 */
 @media (max-width: 768px) {
+  nav,
+  #character-search {
+    width: 95%;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .nav-scroll {
-    justify-content: flex-start; /* 在小屏幕上左對齊 */
-    padding: 5px 10px; /* 減少內邊距 */
+    padding: 5px 10px;
   }
 
   nav a {
-    font-size: 16px; /* 進一步減小字體大小 */
-    padding: 8px 12px; /* 減少內邊距 */
+    font-size: 15px; /* 從 14px 增加到 15px */
+    padding: 8px 12px;
   }
 }
 
 @media (max-width: 480px) {
+  nav,
+  #character-search {
+    width: 98%;
+    max-width: 98%;
+  }
+
   nav a {
-    font-size: 14px;
+    font-size: 18px; /* 從 17px 增加到 18px */
     padding: 6px 10px;
+  }
+}
+
+/* 更小螢幕的調整 */
+@media (max-width: 400px) {
+  nav a {
+    font-size: 15px; /* 從 14px 增加到 15px */
+    padding: 5px 8px;
   }
 }
 
@@ -490,11 +518,14 @@ nav a.active {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  overflow: hidden; /* 改為 hidden，防止滾動 */
+  overflow: auto; /* 改回 auto，允許滾動 */
 }
 
 .modal-content {
-  background-color: #f0f8ff;
+  background-color: rgba(240, 248, 255, 0.9); /* 稍微透明的背景 */
+  background-image: url("img/background3.png"); /* 添加背景圖片 */
+  background-size: cover;
+  background-position: center;
   margin: 5% auto;
   padding: 30px;
   border: none;
@@ -524,9 +555,12 @@ nav a.active {
 #modal-character-info {
   display: flex;
   flex-direction: row;
-  align-items: center; /* 改為居中對齊 */
+  align-items: center;
   width: 100%;
   height: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #modal-character-info img {
@@ -541,18 +575,19 @@ nav a.active {
   flex: 1;
   text-align: left;
   overflow-y: auto;
-  padding-right: 20px;
+  padding: 20px;
   max-height: 300px; /* 與圖片高度一致 */
   display: flex;
   flex-direction: column;
   justify-content: center; /* 垂直居中文字內容 */
+  background-color: rgba(255, 255, 255, 0.7); /* 保留白色半透明背景 */
+  border-radius: 15px; /* 保留圓角 */
 }
 
 #modal-character-info h2 {
   color: #413f66;
   font-size: 2.2rem;
   margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #modal-character-info p {
@@ -567,66 +602,93 @@ nav a.active {
   font-weight: bold;
 }
 
+/* 添加關閉按鈕樣式 */
 .close-button {
-  display: none;
+  display: block; /* 改為顯示 */
+  color: #413f66;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #8dc4ec;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* 手機版的模態框調整 */
 @media (max-width: 768px) {
   .modal-content {
-    width: 90vw;
-    height: 90vw;
-    max-height: 90vh;
-    margin: 5vh auto;
-    padding: 15px;
-    border-radius: 20px;
-    background-color: #f0f8ff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 56.25vw; /* 16:9 比例 */
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: none;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   #modal-character-info {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    padding: 10px;
+    width: 100%;
     height: 100%;
-    padding: 0;
   }
 
   #modal-character-info img {
-    width: 100%;
-    height: 50%;
+    width: 40%;
+    height: 100%;
     object-fit: contain;
-    margin: 0 0 10px 0;
+    margin: 0;
   }
 
   .character-details {
-    width: 100%;
-    height: 50%;
-    padding: 0;
+    width: 58%;
+    height: 100%;
     overflow-y: auto;
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   #modal-character-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
 
   #modal-character-info p {
     font-size: 0.9rem;
     margin-bottom: 5px;
   }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+  }
 }
 
 /* 更小螢幕的調整 */
 @media (max-width: 480px) {
   .modal-content {
-    width: 95vw;
-    height: 95vw;
-    padding: 10px;
+    height: 56.25vw; /* 保持 16:9 比例 */
   }
 
   #modal-character-info h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   #modal-character-info p {
@@ -743,4 +805,17 @@ nav a.active {
   body {
     background-size: cover; /* 確保背景覆蓋整個螢幕 */
   }
+}
+
+/* 為了確保文字可讀性，可以為文字添加陰影 */
+#modal-character-info h2,
+#modal-character-info p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 調整類別標籤的背景色，使其更容易閱讀 */
+.category-tag {
+  background-color: rgba(141, 196, 236, 0.8);
+  color: #413f66;
+  text-shadow: none;
 }

@@ -214,7 +214,7 @@ const characters = [
   },
   {
     name: "黃金獵犬老師 (Mrs. Retriever)",
-    category: "學校老師",
+    category: "學��老師",
     image: "img/mrsretriever.png",
   },
 
@@ -275,7 +275,7 @@ const characters = [
     image: "img/altenergydog.png",
   },
   {
-    name: "阿根廷背包客 (Argentinean Backpacker)",
+    name: "阿根��背包客 (Argentinean Backpacker)",
     category: "其他角色",
     image: "img/argentineanbackpacker.png",
   },
@@ -325,7 +325,7 @@ const characters = [
     image: "img/busstoplady.png",
   },
   {
-    name: "船長 (Captain)",
+    name: "船��� (Captain)",
     category: "其他角色",
     image: "img/captain.png",
   },
@@ -548,7 +548,7 @@ const characters = [
     image: "img/lulurussell.png",
   },
 
-  // 添加遗漏的角色
+  // 加遗漏的角色
   {
     name: "麥肯錫的媽媽 (Mackenzie's Mum)",
     category: "其他角色",
@@ -815,9 +815,9 @@ const filteredCharacters = characters.filter(
 
 // 其餘代碼保持不變
 
-// 將這段代碼添加在角色數組定義之後
+// 將這段代加在角色數組定義之後
 filteredCharacters.sort((a, b) => {
-  // 提取英文名稱（括號內的部分）
+  // 提取英名稱（括號內的部分）
   const nameA = a.name.match(/\(([^)]+)\)/)[1].toLowerCase();
   const nameB = b.name.match(/\(([^)]+)\)/)[1].toLowerCase();
 
@@ -850,7 +850,7 @@ const charactersPerPage = 40; // 顯示更多角色，例如10行4列，共40個
 function createCharacterCard(character) {
   const card = document.createElement("div");
   card.className = "character-card";
-  card.setAttribute("data-category", character.category); // 添加這行
+  card.setAttribute("data-category", character.category);
 
   const img = document.createElement("img");
   img.src = character.image;
@@ -865,30 +865,23 @@ function createCharacterCard(character) {
   characterInfo.className = "character-info";
   characterInfo.innerHTML = `
     <h3>${character.name}</h3>
-    ${
-      character.description
-        ? `<p class="description">${character.description}</p>`
-        : ""
-    }
     <p class="category">${character.category}</p>
   `;
 
   card.appendChild(img);
   card.appendChild(characterInfo);
 
-  // 添加點擊事件來打開模態框
   card.addEventListener("click", () => openModal(character));
 
   return card;
 }
 
-// 修改打開模態框的函數
 function openModal(character) {
   const modal = document.getElementById("character-modal");
   const modalContent = document.getElementById("modal-character-info");
 
-  // 填充模態框內容
   modalContent.innerHTML = `
+    <span class="close-button">&times;</span>
     <img src="${character.image}" alt="${character.name}">
     <div class="character-details">
       <h2>${character.name}</h2>
@@ -918,18 +911,20 @@ function openModal(character) {
     </div>
   `;
 
-  // 顯示模態框
   modal.style.display = "block";
 
-  // 防止點擊模態框內容時關閉
-  modal
-    .querySelector(".modal-content")
-    .addEventListener("click", function (event) {
-      event.stopPropagation();
-    });
+  // 添加關閉按鈕的事件監聽器
+  const closeButton = modalContent.querySelector(".close-button");
+  closeButton.addEventListener("click", closeModal);
+
+  // 點擊模態框外部關閉
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 }
 
-// 修改關閉模態框的函數
 function closeModal() {
   const modal = document.getElementById("character-modal");
   modal.style.display = "none";
@@ -1066,10 +1061,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (allCharactersLink) {
     allCharactersLink.classList.add("active");
   }
-
-  // 點擊模態框外部關閉
-  const modal = document.getElementById("character-modal");
-  modal.addEventListener("click", closeModal);
 });
 
 // 在文檔底部添加：
