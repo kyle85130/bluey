@@ -627,7 +627,7 @@ const characters = [
     image: "img/shopper.png",
   },
   {
-    name: "小吃的媽媽 (Snickers' Mum)",
+    name: "史尼克的媽媽 (Snickers' Mum)",
     category: "其他角色",
     image: "img/snickersmum.png",
   },
@@ -760,11 +760,6 @@ const characters = [
     name: "莉拉 (Lila)",
     category: "朋友們",
     image: "img/lila.png",
-  },
-  {
-    name: "希拉 (Sheila)",
-    category: "其他角色",
-    image: "img/sheila.png",
   },
   {
     name: "曲丕 (Chippy)",
