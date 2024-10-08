@@ -18,6 +18,10 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
+    background-size: 100% auto; /* 寬度100%，高度自動 */
+    background-repeat: no-repeat; /* 防止圖片重複 */
+    background-position: top center; /* 圖片置頂並水平居中 */
+    background-attachment: scroll; /* 允許背景隨內容滾動 */
   }
 }
 
@@ -735,5 +739,12 @@ nav a.active {
 
   #modal-character-info img {
     max-height: 35vh;
+  }
+}
+
+/* 更小螢幕的調整 */
+@media (max-width: 400px) {
+  body {
+    background-size: cover; /* 確保背景覆蓋整個螢幕 */
   }
 }
