@@ -496,18 +496,18 @@ nav a.active {
 .modal-content {
   background-color: #f0f8ff;
   margin: 5% auto;
-  padding: 30px 30px 60px; /* 增加底部內邊距，為了平衡沒有關閉按鈕的空間 */
+  padding: 30px;
   border: none;
   width: 80%;
-  max-width: 900px; /* 增加最大寬度 */
-  height: 60vh; /* 設置固定高度 */
+  max-width: 900px;
+  height: 60vh;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   animation: popIn 0.3s ease-out;
-  display: flex; /* 使用 flex 佈局 */
-  flex-direction: row; /* 橫向排列 */
-  align-items: center; /* 垂直居中 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @keyframes popIn {
@@ -574,66 +574,77 @@ nav a.active {
 /* 手機版的模態框調整 */
 @media (max-width: 768px) {
   .modal-content {
-    width: 95%;
-    height: 95vh; /* 增加高度以減少底部空間 */
-    margin: 2.5vh auto; /* 減少上下邊距 */
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* 改為 hidden，防止整體滾動 */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    max-width: none;
+    background-color: transparent;
+    box-shadow: none;
+    overflow: auto;
   }
 
   #modal-character-info {
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 100%;
-    overflow-y: auto; /* 允許內容滾動 */
+    background-image: url("img/background2.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   #modal-character-info img {
     width: auto;
     max-width: 100%;
     height: auto;
-    max-height: 35vh; /* 稍微減少圖片最大高度 */
+    max-height: 40vh;
     object-fit: contain;
-    margin: 0 auto 15px;
+    margin: 0 auto 20px;
   }
 
   .character-details {
+    background-color: rgba(240, 248, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
     width: 100%;
-    padding-right: 0;
-    overflow-y: auto; /* 允許文字內容滾動 */
-    flex-grow: 1;
-    padding-bottom: 15px; /* 添加底部內邊距 */
+    box-sizing: border-box;
   }
 
   #modal-character-info h2 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   #modal-character-info p {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 }
 
 /* 更小螢幕的調整 */
 @media (max-width: 480px) {
-  .modal-content {
-    padding: 10px;
+  #modal-character-info {
+    padding: 15px;
   }
 
   #modal-character-info img {
-    max-height: 30vh; /* 進一步限制圖片高度 */
+    max-height: 35vh;
+  }
+
+  .character-details {
+    padding: 15px;
   }
 
   #modal-character-info h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   #modal-character-info p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -716,8 +727,7 @@ nav a.active {
     max-width: 100%;
     height: auto;
     max-height: 40vh;
-    margin-right: 0;
-    margin-bottom: 15px;
+    margin: 0 auto 20px;
   }
 
   .character-details {
