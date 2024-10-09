@@ -17,13 +17,8 @@ body {
 /* 手機版的背景圖片設置 */
 @media (max-width: 768px) {
   body {
-    background-image: url("img/background2.png");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    overflow-x: hidden;
+    background-image: none; /* 移除 body 的背景圖片 */
+    background-color: #f0f8ff; /* 設置一個淺色背景 */
   }
 
   body::before {
@@ -33,11 +28,12 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit;
+    background-image: url("img/background2.png");
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
+    pointer-events: none; /* 確保背景不會干擾滾動 */
   }
 
   main {
