@@ -18,9 +18,9 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
-    background-size: cover; /* 改為 cover，確保圖片覆蓋整個屏幕 */
+    background-size: 100% 100vh; /* 寬度100%，高度100vh */
     background-repeat: no-repeat;
-    background-position: center center; /* 居中顯示 */
+    background-position: top center;
     background-attachment: fixed;
     min-height: 100vh; /* 確保body至少有視窗高度 */
   }
