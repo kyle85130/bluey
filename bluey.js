@@ -811,12 +811,12 @@ const characters = [
     image: "img/cinemacounterdog.png",
   },
 
-  // ... 其他角色保持不变 ...
+  // ... 其他色保持不变 ...
 ];
 
 // 在 characters 數組中，找到並刪除 Sheila 的條目
 const filteredCharacters = characters.filter(
-  (character) => character.name !== "希拉 (Sheila)"
+  (character) => character.name !== "��拉 (Sheila)"
 );
 
 // 如果 Sheila 有其他可能的名稱變體，也應該一併刪除，例如：
@@ -890,7 +890,6 @@ function openModal(character) {
   const modalContent = document.getElementById("modal-character-info");
 
   modalContent.innerHTML = `
-    <span class="close-button">&times;</span>
     <img src="${character.image}" alt="${character.name}">
     <div class="character-details">
       <h2>${character.name}</h2>
@@ -922,10 +921,8 @@ function openModal(character) {
 
   modal.style.display = "block";
 
-  const closeButton = modalContent.querySelector(".close-button");
-  closeButton.addEventListener("click", closeModal);
-
-  window.addEventListener("click", function (event) {
+  // 點擊模態框外部區域關閉模態框
+  modal.addEventListener("click", function (event) {
     if (event.target === modal) {
       closeModal();
     }
@@ -988,7 +985,6 @@ function filterAndDisplayCharacters() {
         character.name.toLowerCase().includes(searchTerm)
     );
     displayCharacters(filteredCharacters);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 平滑滾動到頂部
   } catch (error) {
     console.error("Error in filterAndDisplayCharacters:", error);
   }

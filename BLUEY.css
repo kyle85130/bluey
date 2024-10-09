@@ -17,34 +17,48 @@ body {
 /* 手機版的背景圖片設置 */
 @media (max-width: 768px) {
   body {
-    background-image: url("../img/background2.png"); /* 確保路徑正確 */
+    background-image: url("img/background2.png");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center top;
     background-attachment: fixed;
     min-height: 100vh;
-  }
-
-  /* 添加一個偽元素來創建一個覆蓋層，以確保內容可讀 */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色 */
-    z-index: -1;
+    overflow-x: hidden;
   }
 
   main {
     background-color: transparent;
+    min-height: calc(100vh - 60px); /* 假設頁腳高度為 60px */
+    padding-bottom: 60px; /* 為頁腳留出空間 */
+    box-sizing: border-box;
+    overflow-y: auto;
   }
 
   #character-grid {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
     border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(141, 196, 236, 0.9);
+  }
+}
+
+/* 確保所有分類都有相同的樣式 */
+@media (max-width: 768px) {
+  #all-characters,
+  #main-characters,
+  #family,
+  #friends,
+  #school,
+  #neighbors,
+  #other-characters {
+    padding-top: 15px;
   }
 }
 
@@ -194,7 +208,7 @@ main {
   margin: 0;
   font-size: 16px; /* 稍微減小字體大小 */
   line-height: 1.2;
-  max-height: 2.4em; /* 限制為兩行 */
+  max-height: 2.4em; /* ��制為兩行 */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -420,7 +434,7 @@ nav a.active {
   }
 
   nav a {
-    font-size: 15px; /* 從 14px 增加到 15px */
+    font-size: 15px; /* 從 14px ���加到 15px */
     padding: 8px 12px;
   }
 }
