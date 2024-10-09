@@ -29,11 +29,10 @@ body {
     right: 0;
     bottom: 0;
     background-image: url("img/background2.png");
-    background-size: cover;
+    background-size: 100% 100%; /* 確保背景圖片覆蓋整個屏幕 */
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
-    pointer-events: none; /* 確保背景不會干擾滾動 */
   }
 
   main {
@@ -41,7 +40,6 @@ body {
     min-height: 100vh;
     padding: 15px;
     box-sizing: border-box;
-    overflow-y: auto;
     position: relative;
     z-index: 1;
   }
