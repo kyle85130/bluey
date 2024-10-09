@@ -18,8 +18,8 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto;
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
@@ -27,24 +27,18 @@ body {
   }
 
   main {
-    background-color: transparent;
-    min-height: calc(100vh - 60px); /* 假設頁腳高度為 60px */
-    padding-bottom: 60px; /* 為頁腳留出空間 */
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: calc(100vh - 60px);
+    padding: 15px;
     box-sizing: border-box;
     overflow-y: auto;
   }
 
   #character-grid {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 15px;
+    background-color: transparent;
   }
 
   footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: rgba(141, 196, 236, 0.9);
   }
 }
@@ -208,7 +202,7 @@ main {
   margin: 0;
   font-size: 16px; /* 稍微減小字體大小 */
   line-height: 1.2;
-  max-height: 2.4em; /* ��制為兩行 */
+  max-height: 2.4em; /* 制為兩行 */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -434,7 +428,7 @@ nav a.active {
   }
 
   nav a {
-    font-size: 15px; /* 從 14px ���加到 15px */
+    font-size: 15px; /* 從 14px 加到 15px */
     padding: 8px 12px;
   }
 }
