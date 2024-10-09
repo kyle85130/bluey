@@ -95,7 +95,7 @@ const characters = [
     name: "小迪 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
-    description: "布麗的同學",
+    description: "麗的同學",
   },
   {
     name: "可可 (Coco)",
@@ -149,7 +149,7 @@ const characters = [
     name: "克蘿伊 (Chloe)",
     category: "朋友們",
     image: "img/chloe.png",
-    description: "布麗的好友",
+    description: "布麗的友",
   },
   {
     name: "嘟嘟 (Winton)",
@@ -159,8 +159,9 @@ const characters = [
   },
   {
     name: "拉奇 (Lucky)",
-    category: "鄰居", // 將 "朋友們" 改為 "鄰居"
+    category: "鄰居", // 改為 "鄰居"
     image: "img/lucky.png",
+    description: "布麗的鄰居和同學", // 修改描述以反映新的分類
   },
   {
     name: "波波 (Pom Pom)",
@@ -312,7 +313,7 @@ const characters = [
   },
   {
     name: "巴迪的媽媽 (Buddy's Mum)",
-    category: "其他角色",
+    category: "他角色",
     image: "img/buddysmum.png",
   },
   {
@@ -322,7 +323,7 @@ const characters = [
   },
   {
     name: "公車站小姐 (Bus Stop Lady)",
-    category: "��他角色",
+    category: "他角色",
     image: "img/busstoplady.png",
   },
   {
@@ -534,7 +535,7 @@ const characters = [
     image: "img/lulurussell.png",
   },
 
-  // 加遗漏的角色
+  // 加漏的角色
   {
     name: "麥肯錫的媽媽 (Mackenzie's Mum)",
     category: "其他角色",
@@ -637,7 +638,7 @@ const characters = [
   },
   {
     name: "外賣女士 (Takeaway Lady)",
-    category: "其他角色",
+    category: "他角色",
     image: "img/takeawaylady.png",
   },
   {
@@ -802,6 +803,15 @@ const characters = [
   },
 
   // ... 其他角色保持不变 ...
+
+  // 在 characters 数组中的适当位置添加以下角色
+  {
+    name: "電影院櫃檯狗 (Cinema Counter Dog)",
+    category: "其他角色",
+    image: "img/cinemacounterdog.png",
+  },
+
+  // ... 其他角色保持不变 ...
 ];
 
 // 在 characters 數組中，找到並刪除 Sheila 的條目
@@ -812,7 +822,7 @@ const filteredCharacters = characters.filter(
 // 如果 Sheila 有其他可能的名稱變體，也應該一併刪除，例如：
 // const characters = characters.filter(character => !character.name.includes("Sheila"));
 
-// 其餘代碼保持不變
+// 其代碼保持不變
 
 // 將這段代加在色數組定義之後
 filteredCharacters.sort((a, b) => {
@@ -942,57 +952,29 @@ function displayCharacters(filteredCharacters) {
 }
 
 function updatePagination(totalCharacters) {
-  let paginationContainer = document.getElementById("pagination");
+  const paginationContainer = document.getElementById("pagination");
   if (!paginationContainer) {
-    const main = document.querySelector("main");
-    paginationContainer = document.createElement("div");
-    paginationContainer.id = "pagination";
-    main.appendChild(paginationContainer);
+    console.error("Pagination container not found");
+    return;
   }
 
-  const totalPages = Math.ceil(totalCharacters / charactersPerPage);
   paginationContainer.innerHTML = "";
+  const totalPages = Math.ceil(totalCharacters / charactersPerPage);
 
-  // 只顯示當前頁碼附近的頁碼
-  const maxVisiblePages = 5;
-  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-
-  if (endPage - startPage + 1 < maxVisiblePages) {
-    startPage = Math.max(1, endPage - maxVisiblePages + 1);
-  }
-
-  if (startPage > 1) {
-    paginationContainer.appendChild(createPageButton(1, "首頁"));
-    if (startPage > 2) {
-      paginationContainer.appendChild(document.createTextNode("..."));
+  // 只添加頁碼按鈕
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = document.createElement("button");
+    pageButton.textContent = i;
+    pageButton.addEventListener("click", () => {
+      currentPage = i;
+      filterAndDisplayCharacters();
+      window.scrollTo({ top: 0, behavior: "smooth" }); // 平滑滾動到頂部
+    });
+    if (i === currentPage) {
+      pageButton.classList.add("active");
     }
+    paginationContainer.appendChild(pageButton);
   }
-
-  for (let i = startPage; i <= endPage; i++) {
-    paginationContainer.appendChild(createPageButton(i));
-  }
-
-  if (endPage < totalPages) {
-    if (endPage < totalPages - 1) {
-      paginationContainer.appendChild(document.createTextNode("..."));
-    }
-    paginationContainer.appendChild(createPageButton(totalPages, "末頁"));
-  }
-}
-
-function createPageButton(pageNum, text = pageNum) {
-  const pageButton = document.createElement("button");
-  pageButton.textContent = text;
-  pageButton.addEventListener("click", () => {
-    currentPage = pageNum;
-    filterAndDisplayCharacters();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-  if (pageNum === currentPage) {
-    pageButton.classList.add("active");
-  }
-  return pageButton;
 }
 
 function filterAndDisplayCharacters() {
@@ -1006,6 +988,7 @@ function filterAndDisplayCharacters() {
         character.name.toLowerCase().includes(searchTerm)
     );
     displayCharacters(filteredCharacters);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // 平滑滾動到頂部
   } catch (error) {
     console.error("Error in filterAndDisplayCharacters:", error);
   }
@@ -1053,6 +1036,7 @@ document.querySelectorAll("nav a").forEach((link) => {
 document.addEventListener("DOMContentLoaded", () => {
   currentCategory = "all";
   filterAndDisplayCharacters();
+  updateCharacterCount(); // 添加這行
 
   const allCharactersLink = document.querySelector('nav a[href="#all"]');
   if (allCharactersLink) {
@@ -1161,3 +1145,13 @@ characters.sort((a, b) => {
   const nameB = b.name.match(/\(([^)]+)\)/)[1].toLowerCase();
   return nameA.localeCompare(nameB);
 });
+
+function updateCharacterCount() {
+  const totalCharacters = characters.length;
+  console.log(`Total number of characters: ${totalCharacters}`);
+  // 如果您想在頁面上顯示這個數字，可以添加以下代碼：
+  // const countElement = document.getElementById('character-count');
+  // if (countElement) {
+  //   countElement.textContent = `總角色數：${totalCharacters}`;
+  // }
+}

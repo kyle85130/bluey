@@ -243,32 +243,35 @@ footer a:hover {
 }
 
 #pagination {
-  margin-top: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 #pagination button {
-  margin: 0 5px;
-  padding: 8px 15px;
-  cursor: pointer;
+  margin: 5px;
+  padding: 8px 12px;
   background-color: #8dc4ec;
   color: #413f66;
   border: none;
-  border-radius: 20px;
-  font-family: "Noto Sans TC", "華康翩翩體", "微軟正體", "Comic Sans MS",
-    cursive, sans-serif;
-  transition: all 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-#pagination button:hover {
+#pagination button:hover,
+#pagination button.active {
   background-color: #413f66;
   color: #ffffff;
   transform: scale(1.1);
 }
 
-#pagination button.active {
-  background-color: #413f66;
-  color: #ffffff;
+@media (max-width: 768px) {
+  #pagination button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -367,7 +370,7 @@ nav {
   white-space: nowrap;
   width: 100%;
   box-sizing: border-box;
-  border: 3px solid #413f66; /* 與搜尋欄邊框一致 */
+  border: 3px solid #413f66; /* 尋欄邊框一致 */
 }
 
 nav a {
@@ -377,7 +380,7 @@ nav a {
   margin: 0 2px;
   white-space: nowrap;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 17px; /* 從 16px 增加 17px */
+  font-size: 17px; /*  16px 增加 17px */
   font-weight: bold;
   border-radius: 20px;
 }
@@ -443,7 +446,7 @@ nav a.active {
   }
 }
 
-/* 只為家庭成員使用粗體���述 */
+/* 只為家庭成員使用粗體述 */
 .character-card[data-category="家庭員"] .character-info .description {
   font-weight: bold;
 }
@@ -503,7 +506,7 @@ nav a.active {
   }
 
   .character-card img {
-    height: 200px; /* 稍微減少圖片高度 */
+    height: 200px; /* 微減少圖片高度 */
   }
 }
 
@@ -549,12 +552,12 @@ nav a.active {
   background-image: url("img/background3.png");
   background-size: cover;
   background-position: center;
-  margin: 5% auto;
+  margin: 0;
   padding: 30px;
   border: none;
-  width: 80%;
-  max-width: 900px;
-  height: 60vh;
+  width: 90%;
+  max-width: 1000px;
+  height: 40vh;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
@@ -562,6 +565,10 @@ nav a.active {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #modal-character-info {
@@ -576,8 +583,9 @@ nav a.active {
 }
 
 #modal-character-info img {
-  width: 40%;
-  height: 300px;
+  width: 45%;
+  height: auto;
+  max-height: 95%;
   object-fit: contain;
   margin-right: 30px;
   align-self: center;
@@ -588,7 +596,7 @@ nav a.active {
   text-align: left;
   overflow-y: auto;
   padding: 20px;
-  max-height: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -598,159 +606,64 @@ nav a.active {
 
 #modal-character-info h2 {
   color: #413f66;
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
 }
 
 #modal-character-info p {
   color: #555;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-#modal-character-info strong {
-  color: #413f66;
-  font-weight: bold;
-}
-
-.close-button {
-  display: block;
-  color: #413f66;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-  color: #8dc4ec;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 移除所有手機版的模態框樣式 */
+/* 手機版的調整 */
 @media (max-width: 768px) {
-  .modal,
-  .modal-content,
-  #modal-character-info,
-  .character-details,
-  .close-button {
-    display: none !important;
-  }
-}
-
-/* 手機版的樣式調整 */
-@media (max-width: 768px) {
-  body {
-    font-size: 15px;
-    overflow-x: hidden; /* 防止水平滾動 */
-  }
-
-  .nav-scroll {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    padding: 5px 0;
-    margin-bottom: 15px;
-  }
-
-  nav a {
-    display: inline-block;
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  main {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #character-search {
-    width: 100%;
-    margin: 10px 0;
-    box-sizing: border-box;
-  }
-
-  #character-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 100%;
-  }
-
-  .character-card {
-    width: 100%;
-  }
-
-  .character-card img {
-    height: auto;
-    max-height: 150px;
-    width: 100%;
-    object-fit: contain;
-  }
-
-  /* 模態框調整 */
   .modal-content {
-    width: 95%;
-    height: 90vh;
-    margin: 5vh auto;
-    padding: 15px;
-    overflow-y: auto;
-  }
-
-  #modal-character-info {
+    width: 90%;
+    height: 40vh;
+    padding: 20px;
     flex-direction: column;
   }
 
+  #modal-character-info {
+    flex-direction: row; /* 保持水平排列 */
+  }
+
   #modal-character-info img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 40vh;
-    margin: 0 auto 20px;
+    width: 40%;
+    max-height: 90%;
+    margin-right: 15px;
+    margin-bottom: 0;
   }
 
   .character-details {
-    width: 100%;
-    padding-right: 0;
-    max-height: none;
+    width: 60%;
+    padding: 10px;
+  }
+
+  #modal-character-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  #modal-character-info p {
+    font-size: 1rem;
+    margin-bottom: 8px;
   }
 }
 
 /* 更小螢幕的調整 */
 @media (max-width: 480px) {
-  #character-grid {
-    grid-template-columns: 1fr;
+  .modal-content {
+    padding: 15px;
   }
 
-  .character-card img {
-    max-height: 200px;
+  #modal-character-info h2 {
+    font-size: 1.5rem;
   }
 
-  #modal-character-info img {
-    max-height: 35vh;
+  #modal-character-info p {
+    font-size: 0.9rem;
   }
-}
-
-/* 更小螢幕的調整 */
-@media (max-width: 400px) {
-  body {
-    background-size: cover; /* 確保背景覆蓋整個螢幕 */
-  }
-}
-
-/* 為了確保文字可讀性，可以為文字添加陰影 */
-#modal-character-info h2,
-#modal-character-info p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* 調整類別標籤的背景色，使其更容易閱讀 */
-.category-tag {
-  background-color: rgba(141, 196, 236, 0.8);
-  color: #413f66;
-  text-shadow: none;
 }
