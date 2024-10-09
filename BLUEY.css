@@ -17,20 +17,32 @@ body {
 /* 手機版的背景圖片設置 */
 @media (max-width: 768px) {
   body {
-    background-image: url("img/background2.png");
-    background-size: cover; /* 覆蓋整個視窗 */
-    background-repeat: no-repeat; /* 不重複背景圖片 */
-    background-position: center center; /* 居中顯示 */
-    background-attachment: fixed; /* 固定背景 */
-    min-height: 100vh; /* 確保 body 至少有視窗高度 */
+    background-image: url("../img/background2.png"); /* 確保路徑正確 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* 添加一個偽元素來創建一個覆蓋層，以確保內容可讀 */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色 */
+    z-index: -1;
   }
 
   main {
-    background-color: transparent; /* 確保主要內容區域背景透明 */
+    background-color: transparent;
   }
 
   #character-grid {
-    background-color: rgba(255, 255, 255, 0.7); /* 為角色網格添加半透明背景 */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
     border-radius: 15px;
   }
@@ -431,7 +443,7 @@ nav a.active {
   }
 }
 
-/* 只為家庭成員使用粗體描述 */
+/* 只為家庭成員使用粗體���述 */
 .character-card[data-category="家庭員"] .character-info .description {
   font-weight: bold;
 }
