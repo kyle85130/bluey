@@ -18,12 +18,26 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
 
   main {
@@ -32,6 +46,8 @@ body {
     padding: 15px;
     box-sizing: border-box;
     overflow-y: auto;
+    position: relative;
+    z-index: 1;
   }
 
   #character-grid {
@@ -40,6 +56,8 @@ body {
 
   footer {
     background-color: rgba(141, 196, 236, 0.9);
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -200,7 +218,7 @@ main {
 
 .character-info h3 {
   margin: 0;
-  font-size: 16px; /* 稍微減小字體大小 */
+  font-size: 16px; /* 稍微減小字大小 */
   line-height: 1.2;
   max-height: 2.4em; /* 制為兩行 */
   overflow: hidden;
