@@ -18,18 +18,17 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
-    background-size: auto 100%; /* 修改這裡：高度固定為 100%，寬度自動調整 */
-    background-position: center top;
+    background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     overflow-x: hidden;
   }
 
-  /* 其他樣式保持不變 */
   main {
     background-color: rgba(255, 255, 255, 0.7);
-    min-height: calc(100vh - 60px);
+    min-height: 100vh;
     padding: 15px;
     box-sizing: border-box;
     overflow-y: auto;
@@ -499,7 +498,7 @@ nav a.active {
 
   nav a {
     font-size: 17px; /* 從 18px 減小到 17px */
-    padding: 6px 10px; /* 稍微減少內邊距以適���更小的字體 */
+    padding: 6px 10px; /* 稍微減少內邊距以適更小的字體 */
   }
 }
 
