@@ -159,7 +159,7 @@ const characters = [
   },
   {
     name: "拉奇 (Lucky)",
-    category: "鄰居", // 將 "朋友們" 改為 "鄰居"
+    category: "鄰居", // 將 "朋友們" 改為 "��居"
     image: "img/lucky.png",
   },
   {
@@ -214,7 +214,7 @@ const characters = [
   },
   {
     name: "黃金獵犬老師 (Mrs. Retriever)",
-    category: "學��老師",
+    category: "學老師",
     image: "img/mrsretriever.png",
   },
 
@@ -275,7 +275,7 @@ const characters = [
     image: "img/altenergydog.png",
   },
   {
-    name: "阿根��背包客 (Argentinean Backpacker)",
+    name: "阿根廷背包客 (Argentinean Backpacker)",
     category: "其他角色",
     image: "img/argentineanbackpacker.png",
   },
@@ -321,16 +321,16 @@ const characters = [
   },
   {
     name: "公車站小姐 (Bus Stop Lady)",
-    category: "其他角",
+    category: "其他角色",
     image: "img/busstoplady.png",
   },
   {
-    name: "船��� (Captain)",
+    name: "隊長 (Captain)",
     category: "其他角色",
     image: "img/captain.png",
   },
   {
-    name: "結帳狗 (Checkout Dog)",
+    name: "收銀員 (Checkout Dog)",
     category: "其他角色",
     image: "img/checkoutdog.png",
   },
@@ -590,7 +590,7 @@ const characters = [
     image: "img/pompomsmum.png",
   },
   {
-    name: "小馬女士 (Pony Lady)",
+    name: "小女士 (Pony Lady)",
     category: "其他",
     image: "img/ponylady.png",
   },
@@ -605,12 +605,12 @@ const characters = [
     image: "img/rocko.png",
   },
   {
-    name: "拉斯蒂的爸爸 (Rusty's Dad)",
+    name: "小迪的爸爸 (Rusty's Dad)",
     category: "其他角色",
     image: "img/rustysdad.png",
   },
   {
-    name: "拉斯蒂的媽媽 (Rusty's Mum)",
+    name: "小迪的媽媽 (Rusty's Mum)",
     category: "其他角色",
     image: "img/rustysmum.png",
   },
@@ -646,7 +646,7 @@ const characters = [
   },
   {
     name: "衝浪者 (Surfer, from The Beach)",
-    category: "其他角色",
+    category: "其角色",
     image: "img/surferthebeach.png",
   },
   {
@@ -913,11 +913,9 @@ function openModal(character) {
 
   modal.style.display = "block";
 
-  // 添加關閉按鈕的事件監聽器
   const closeButton = modalContent.querySelector(".close-button");
   closeButton.addEventListener("click", closeModal);
 
-  // 點擊模態框外部關閉
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
       closeModal();
@@ -1041,7 +1039,7 @@ document.querySelectorAll("nav a").forEach((link) => {
         : currentCategory === "friends"
         ? "朋友們"
         : currentCategory === "school"
-        ? "學校老師" // 這裡改為 "學校老師"
+        ? "學校老師" // 裡改為 "學校老師"
         : currentCategory === "neighbors"
         ? "鄰居"
         : currentCategory === "other-characters"
