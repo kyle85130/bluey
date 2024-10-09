@@ -95,7 +95,7 @@ const characters = [
     name: "小迪 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
-    description: "麗的同學",
+    description: "布麗的同學",
   },
   {
     name: "可可 (Coco)",
@@ -159,7 +159,7 @@ const characters = [
   },
   {
     name: "拉奇 (Lucky)",
-    category: "鄰居", // 將 "朋友們" 改為 "��居"
+    category: "鄰居", // 將 "朋友們" 改為 "鄰居"
     image: "img/lucky.png",
   },
   {
@@ -214,8 +214,9 @@ const characters = [
   },
   {
     name: "黃金獵犬老師 (Mrs. Retriever)",
-    category: "學老師",
+    category: "學校老師",
     image: "img/mrsretriever.png",
+    description: "布麗和賓果的學校老師",
   },
 
   // 鄰居
@@ -321,7 +322,7 @@ const characters = [
   },
   {
     name: "公車站小姐 (Bus Stop Lady)",
-    category: "其他角色",
+    category: "��他角色",
     image: "img/busstoplady.png",
   },
   {
@@ -351,28 +352,13 @@ const characters = [
   },
   {
     name: "迪哥 (Digger)",
-    category: "他角色",
+    category: "其他角色",
     image: "img/digger.png",
   },
   {
     name: "克蘿伊的媽媽 (Chloe's Mum)",
     category: "其他角色",
     image: "img/chloesmum.png",
-  },
-  {
-    name: "恰恰 (Chubbles)",
-    category: "其他角色",
-    image: "img/chubbles.png",
-  },
-  {
-    name: "巧吉 (Chunky Chimp)",
-    category: "其他角色",
-    image: "img/chunkychimp.png",
-  },
-  {
-    name: "電影院櫃檯狗 (Cinema Counter Dog)",
-    category: "其他角色",
-    image: "img/cinemacounterdog.png",
   },
   {
     name: "柯尼利厄斯 (Cornelius)",
@@ -421,7 +407,7 @@ const characters = [
   },
   {
     name: "道吉的媽媽 (Dougie's Mum)",
-    category: "他角色",
+    category: "其他角色",
     image: "img/dougiesmum.png",
   },
   {
@@ -492,7 +478,7 @@ const characters = [
   },
   {
     name: "傑克的爸爸 (Jack's Dad)",
-    category: "其他色",
+    category: "其他角色",
     image: "img/jacksdad.png",
   },
   {
@@ -529,7 +515,7 @@ const characters = [
   },
   {
     name: "圖書管理員 (Librarian)",
-    category: "其他",
+    category: "其他角色",
     image: "img/librarian.png",
   },
   {
@@ -581,7 +567,7 @@ const characters = [
   },
   {
     name: "警察 (Policeman)",
-    category: "其他角",
+    category: "其他角色",
     image: "img/policeman.png",
   },
   {
@@ -590,8 +576,8 @@ const characters = [
     image: "img/pompomsmum.png",
   },
   {
-    name: "小女士 (Pony Lady)",
-    category: "其他",
+    name: "小馬女士 (Pony Lady)",
+    category: "其他角色",
     image: "img/ponylady.png",
   },
   {
@@ -646,7 +632,7 @@ const characters = [
   },
   {
     name: "衝浪者 (Surfer, from The Beach)",
-    category: "其角色",
+    category: "其他角色",
     image: "img/surferthebeach.png",
   },
   {
@@ -709,7 +695,7 @@ const characters = [
   // 新增的角色
   {
     name: "小矮人們 (Gnomes)",
-    category: "其角色",
+    category: "其他角色",
     image: "img/gnomes.png",
   },
   {
@@ -776,7 +762,7 @@ const characters = [
     description: "賓果的同學",
   },
 
-  // 在 characters 數組的適當位置添加以下新角色
+  // 在 characters 数组中的适当位置添加以下角色
 
   // 添加 Floppy (皮皮)
   {
@@ -802,7 +788,20 @@ const characters = [
     description: "世界上最調皮和最煩人的獨角獸",
   },
 
-  // ... 其他現有的角色保持不變 ...
+  // 在 characters 数组中的适当位置添加以下角色
+
+  {
+    name: "恰恰 (Chubbles)",
+    category: "其他角色",
+    image: "img/chubbles.png",
+  },
+  {
+    name: "巧吉 (Chunky Chimp)",
+    category: "其他角色",
+    image: "img/chunkychimp.png",
+  },
+
+  // ... 其他角色保持不变 ...
 ];
 
 // 在 characters 數組中，找到並刪除 Sheila 的條目
@@ -815,7 +814,7 @@ const filteredCharacters = characters.filter(
 
 // 其餘代碼保持不變
 
-// 將這段代加在角色數組定義之後
+// 將這段代加在色數組定義之後
 filteredCharacters.sort((a, b) => {
   // 提取英名稱（括號內的部分）
   const nameA = a.name.match(/\(([^)]+)\)/)[1].toLowerCase();
@@ -1039,7 +1038,7 @@ document.querySelectorAll("nav a").forEach((link) => {
         : currentCategory === "friends"
         ? "朋友們"
         : currentCategory === "school"
-        ? "學校老師" // 裡改為 "學校老師"
+        ? "學校老師"
         : currentCategory === "neighbors"
         ? "鄰居"
         : currentCategory === "other-characters"

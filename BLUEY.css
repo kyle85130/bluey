@@ -18,11 +18,21 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
-    background-size: 100% 100vh; /* 寬度100%，高度100vh */
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
-    min-height: 100vh; /* 確保body至少有視窗高度 */
+    background-size: cover; /* 覆蓋整個視窗 */
+    background-repeat: no-repeat; /* 不重複背景圖片 */
+    background-position: center center; /* 居中顯示 */
+    background-attachment: fixed; /* 固定背景 */
+    min-height: 100vh; /* 確保 body 至少有視窗高度 */
+  }
+
+  main {
+    background-color: transparent; /* 確保主要內容區域背景透明 */
+  }
+
+  #character-grid {
+    background-color: rgba(255, 255, 255, 0.7); /* 為角色網格添加半透明背景 */
+    padding: 15px;
+    border-radius: 15px;
   }
 }
 
