@@ -18,10 +18,11 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("img/background2.png");
-    background-size: cover; /* 覆蓋整個視窗 */
-    background-repeat: no-repeat; /* 防止圖片重複 */
-    background-position: center; /* 圖片居中 */
-    background-attachment: fixed; /* 固定背景，不隨內容滾動 */
+    background-size: 100% auto; /* 寬度100%，高度自動 */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    min-height: 100vh; /* 確保body至少有視窗高度 */
   }
 }
 
