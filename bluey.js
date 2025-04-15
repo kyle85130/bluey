@@ -3,23 +3,29 @@ const characters = [
     name: "布麗 (Bluey Heeler)",
     category: "主要角色",
     image: "img/bluey.png",
+    description:
+      "布麗是一隻充滿活力、富有想像力的六歲藍色牧羊犬。她喜歡玩遊戲，經常帶領她的家人和朋友們進行各種有趣的冒險。",
   },
   {
     name: "賓果 (Bingo Heeler)",
     category: "主要角色",
     image: "img/bingo.png",
+    description:
+      "賓果是布麗的四歲妹妹，她安靜、善良，喜歡跟隨姐姐的腳步。她有時會感到害羞，但在遊戲中常常展現出驚人的創意。",
   },
   {
     name: "班迪 (Bandit Heeler)",
     category: "主要角色",
     image: "img/bandit.png",
-    description: "布麗、賓果的爸爸",
+    description:
+      "班迪是布麗和賓果的爸爸，他是一位考古學家。他非常愛玩，總是願意陪孩子們玩各種遊戲，即使有時會感到疲憊。",
   },
   {
     name: "琪琪 (Chilli Heeler)",
     category: "主要角色",
     image: "img/chilli.png",
-    description: "布麗、賓果的媽媽",
+    description:
+      "琪琪是布麗和賓果的媽媽，她在機場工作。她聰明、有耐心，常常在孩子們的遊戲中演重要角色，並教導她們生活的重要課題。",
   },
 
   // 家庭成员
@@ -27,25 +33,29 @@ const characters = [
     name: "曼曼 (Muffin Heeler)",
     category: "家庭成員",
     image: "img/muffin.png",
-    description: "珊珊的姐姐",
+    description:
+      "曼曼是布麗和賓果的堂姐，她充滿活力且有時有點任性。她經常參與布麗家的遊戲，並為故事情節增添有趣的轉折。",
   },
   {
     name: "珊珊 (Socks Heeler)",
     category: "家庭成員",
     image: "img/socks.png",
-    description: "曼曼的妹妹",
+    description:
+      "珊珊是曼曼的妹妹，布麗和賓果的小堂妹。她還是個嬰兒，常常以四腳爬行的方式移動，模仿狗狗的行為。",
   },
   {
     name: "史踹普 (Stripe Heeler)",
     category: "家庭成員",
     image: "img/stripe.png",
-    description: "班迪的弟弟, 曼曼、珊珊的爸爸",
+    description:
+      "史踹普是班迪的弟弟，曼曼和珊珊的爸爸。他幽默風趣，常常參與家庭活動和遊戲。",
   },
   {
     name: "崔西 (Trixie Heeler)",
     category: "家庭成員",
     image: "img/trixie.png",
-    description: "曼曼、珊珊的媽媽",
+    description:
+      "崔西是史踹普的妻子，曼曼和珊珊的媽媽。她活潑開朗，經常和家人一起參與各種活動。",
   },
   {
     name: "雷德利 (Radley Heeler)",
@@ -95,67 +105,78 @@ const characters = [
     name: "小迪 (Rusty)",
     category: "朋友們",
     image: "img/rusty.png",
-    description: "麗的同學",
+    description:
+      "小迪是布麗的同學，他的父親是軍人。他喜歡玩軍事遊戲，並且在 '軍營' 這集中展現了他的領導才能。",
   },
   {
     name: "可可 (Coco)",
     category: "朋友們",
     image: "img/coco.png",
-    description: "布麗的同學",
+    description:
+      "可可是布麗的好朋友，她是一隻粉紅色的貴賓犬。她喜歡穿裙子，性格有點嬌氣，但非常友善。",
   },
   {
     name: "麥肯錫 (Mackenzie)",
     category: "朋友們",
     image: "img/mackenzie.png",
-    description: "布麗的同學",
+    description:
+      "麥肯錫是布麗的同學，是一隻邊境牧羊犬。他來自紐西蘭，喜歡運動，特別是橄欖球。",
   },
   {
     name: "小英 (Indy)",
     category: "朋友們",
     image: "img/indy.png",
-    description: "布麗的同學",
+    description:
+      "小英是布麗的同學，她是一隻阿富汗獵犬。她性格溫和，喜歡瑜伽和健康食品。",
   },
   {
     name: "史尼克 (Snickers)",
     category: "朋友們",
     image: "img/snickers.png",
-    description: "布麗的同學",
+    description:
+      "史尼克是布麗的同學，他是一隻臘腸狗。他喜歡跳舞，特別是芭蕾舞。",
   },
   {
     name: "哈妮 (Honey)",
     category: "朋友們",
     image: "img/honey.png",
-    description: "布麗的同學",
+    description:
+      "哈妮是布麗的同學，她是一隻米色的小狗。她性格溫柔，有時會感到害羞。",
   },
   {
     name: "傑克 (Jack Russell)",
     category: "朋友們",
     image: "img/jack.png",
-    description: "布麗的同學",
+    description:
+      "傑克是布麗的同學，他是一隻傑克羅素梗。他有注意力不足過動症（ADHD），但在 '陸軍' 這集中展現了他的專注力和領導能力。",
   },
   {
     name: "㹴犬三兄弟 (Terriers)",
     category: "朋友們",
     image: "img/terriers.png",
-    description: "布麗的同學",
+    description:
+      "㹴犬三兄弟是布麗的同學，他們是三隻相同的㹴犬。他們總是一起行動，喜歡惡作劇。",
   },
   {
     name: "皮皮 (Pretzel)",
     category: "朋友們",
     image: "img/pretzel.png",
-    description: "布麗的同學",
+    description:
+      "皮皮是布麗的同學，他是一隻達克斯獵犬。他喜歡運動，特別是足球。",
   },
   {
     name: "克蘿伊 (Chloe)",
     category: "朋友們",
     image: "img/chloe.png",
-    description: "布麗的友",
+    description:
+      "克蘿伊是布麗最好的朋友之一，她是一隻金毛尋回犬。她聰明、善良，經常和布麗一起玩耍。",
   },
   {
     name: "嘟嘟 (Winton)",
     category: "朋友們",
     image: "img/winton.png",
-    description: "布麗的同學",
+    description:
+      "嘟嘟是布麗的同學，他是一隻英國鬥牛犬。他性格開朗，喜歡吃東西。",
   },
   {
     name: "拉奇 (Lucky)",
@@ -167,44 +188,54 @@ const characters = [
     name: "波波 (Pom Pom)",
     category: "朋友們",
     image: "img/pompom.png",
+    description:
+      "波波是布麗的朋友，她是一隻博美犬。她性格活潑，喜歡參與各種遊戲。",
   },
   {
     name: "蜜絲 (Missy)",
     category: "朋友們",
     image: "img/missy.png",
-    description: "賓果的同學",
+    description:
+      "蜜絲是賓果的同學，她是一隻米格魯犬。她性格溫和，喜歡安靜的活動。",
   },
   {
     name: "蜜雅 (Mia)",
     category: "朋友們",
     image: "img/mia.png",
+    description: "蜜雅是布麗的朋友，她是一隻西施犬。她喜歡時尚和美容。",
   },
   {
     name: "小班莉 (Bentley)",
     category: "朋友們",
     image: "img/bentley.png",
-    description: "賓果的同學",
+    description:
+      "小班莉是賓果的同學，她是一隻英國鬥牛犬。她性格活潑，喜歡運動。",
   },
   {
     name: "海克力 (Hercules)",
     category: "朋友們",
     image: "img/hercules.png",
+    description: "海克力是布麗的朋友，他是一隻大丹犬。他體型大但性格溫和。",
   },
   {
     name: "小路 (Jean-Luc)",
     category: "朋友們",
     image: "img/jeanluc.png",
+    description:
+      "小路是布麗在度假時認識的朋友，他是一隻拉布拉多犬。他來自加拿大，不會說英語。",
   },
   {
     name: "小珍珍媽媽 (Juniper's Mum)",
     category: "其他角色",
     image: "img/junipersmum.png",
+    description: "小珍珍的媽媽，她在市集上經營健康果汁攤位。",
   },
   {
     name: "巴迪 (Buddy)",
     category: "朋友們",
     image: "img/buddy.png",
-    description: "賓果的同學",
+    description:
+      "巴迪是賓果的同學，他是一隻貴賓犬。他性格友善，喜歡和大家一起玩耍。",
   },
 
   // 學校相關
@@ -212,12 +243,15 @@ const characters = [
     name: "凱莉老師 (Calypso)",
     category: "學校老師",
     image: "img/calypso.png",
+    description:
+      "凱莉老師是布麗的學校老師，她是一隻拉布拉多犬。她溫柔、有智慧，常常用故事來教導孩子們。",
   },
   {
     name: "黃金獵犬老師 (Mrs. Retriever)",
     category: "學校老師",
     image: "img/mrsretriever.png",
-    description: "布麗和賓果的學校老師",
+    description:
+      "黃金獵犬老師是布麗和賓果的學校老師，她是一隻黃金獵犬。她友善、有耐心，深受學生喜愛。",
   },
 
   // 鄰居
@@ -225,27 +259,35 @@ const characters = [
     name: "拉奇爸爸 (Lucky's Dad)",
     category: "鄰居",
     image: "img/pat.png",
+    description:
+      "拉奇的爸爸，他是布麗家的鄰居。他經常參與布麗家的遊戲，特別是在後院進行的活動。",
   },
   {
     name: "柔柔的媽媽 (Judo's Mum)",
     category: "鄰居",
     image: "img/wendy.png",
+    description:
+      "柔柔的媽媽，她是布麗家的鄰居。她有時會對孩子們的遊戲感到困擾。",
   },
   {
     name: "柔柔 (Judo)",
     category: "鄰居",
     image: "img/judo.png",
+    description:
+      "柔柔是布麗的鄰居，她是一隻吉娃娃。她有時會表現得有點傲慢，但也會和布麗一起玩耍。",
   },
   {
     name: "拉奇媽媽 (Lucky's Mum)",
     category: "鄰居",
     image: "img/janelle.png",
+    description: "拉奇的媽媽，她是布麗家的鄰居。她經常在後院和其他鄰居聊天。",
   },
   {
     name: "恰奇 (Chucky)",
     category: "鄰居",
     image: "img/chucky.png",
-    description: "拉奇的弟弟",
+    description:
+      "恰奇是拉奇的弟弟，他是布麗家的鄰居。他還很小，經常跟在哥哥後面。",
   },
 
   // 其他角色
@@ -253,261 +295,281 @@ const characters = [
     name: "阿飛 (Alfie)",
     category: "其他角色",
     image: "img/alfie.png",
-    description: "玩具店店員",
+    description:
+      "阿飛是玩具店的店員，他在 '玩具店' 這集中幫助布麗和賓果找到了完美的玩具。",
   },
   {
     name: "街頭藝人 (Busker)",
     category: "其他角色",
     image: "img/busker.png",
+    description:
+      "街頭藝人是一位多才多藝的音樂家，經常在市集上演奏。他在 '市集' 這集中教導布麗音樂的重要性。",
   },
   {
     name: "飛老闆 (Alfie's Boss)",
     category: "其他角色",
     image: "img/alfiesboss.png",
-    description: "玩具店老闆",
+    description: "飛老闆是玩具店的老闆，他在 '玩具店' 這集中出現。",
   },
   {
     name: "阿飛的媽媽 (Alfie's Mum)",
     category: "其他角色",
     image: "img/alfiesmum.png",
+    description: "阿飛的媽媽在 '玩具店' 這集中短暫出現。",
   },
   {
     name: "替代能源狗 (Alt Energy Dog)",
     category: "其他角色",
     image: "img/altenergydog.png",
+    description: "替代能源狗是一位推銷太陽能板的銷售員，在 '屋頂' 這集中出現。",
   },
   {
     name: "阿根廷背包客 (Argentinean Backpacker)",
     category: "其他角色",
     image: "img/argentineanbackpacker.png",
+    description: "阿根廷背包客是一位來自阿根廷的遊客，在 '露營' 這集中出現。",
   },
-  {
-    name: "可可的媽媽 (Coco's Mum)",
-    category: "其他角色",
-    image: "img/cocosmum.png",
-  },
-  // {
-  //   name: "餅乾 (Cookie, from Stickbird)",
-  //   category: "其他角色",
-  //   image: "img/cookiestickbird.png",
-  // },
-  // {
-  //   name: "餅乾 (Cookie, from The Sign)",
-  //   category: "其他角色",
-  //   image: "img/cookiethesign.png",
-  // },
-  // {
-  //   name: "餅乾的朋友A (Cookie's Friend A)",
-  //   category: "他角色",
-  //   image: "img/cookiesfrienda.png",
-  // },
-  // {
-  //   name: "餅乾的朋友B (Cookie's Friend B)",
-  //   category: "其他角色",
-  //   image: "img/cookiesfriendb.png",
-  // },
   {
     name: "巴基 (Bucky Dunstan)",
     category: "其他角色",
     image: "img/buckydunstan.png",
+    description:
+      "巴基是班迪的舊識，在 '房子' 這集中出現，他是一名房地產經紀人。",
   },
   {
     name: "巴迪的媽媽 (Buddy's Mum)",
-    category: "他角色",
+    category: "其他角色",
     image: "img/buddysmum.png",
+    description: "巴迪的媽媽是巴迪的母親，在幾集中短暫出現。",
   },
   {
     name: "公車站狗 (Bus Stop Dog)",
     category: "其他角色",
     image: "img/busstopdog.png",
+    description: "公車站狗是一位在公車站等車的路人，在 '公車' 這集中出現。",
   },
   {
     name: "公車站小姐 (Bus Stop Lady)",
-    category: "他角色",
+    category: "其他角色",
     image: "img/busstoplady.png",
+    description: "公車站小姐是一位在公車站等車的路人，在 '公車' 這集中出現。",
   },
   {
     name: "隊長 (Captain)",
     category: "其他角色",
     image: "img/captain.png",
+    description: "隊長是布麗學校的一名學生，他在 '陸軍' 這集中擔任隊長角色。",
   },
   {
     name: "收銀員 (Checkout Dog)",
     category: "其他角色",
     image: "img/checkoutdog.png",
+    description: "收銀員是超市的工作人員，在 '超市' 這集中出現。",
   },
   {
     name: "收銀員小姐 (Checkout Lady)",
     category: "其他角色",
     image: "img/checkoutlady.png",
+    description: "收銀員小姐是另一位超市工作人員，也在 '超市' 這集中出現。",
   },
   {
     name: "櫻桃 (Cherry)",
     category: "其他角色",
     image: "img/cherry.png",
+    description: "櫻桃是曲丕的女朋友，在 '工作' 這集中出現。",
   },
   {
     name: "啾比嘟比 (Chew B'Deube)",
     category: "其他角色",
     image: "img/chewbdeube.png",
+    description: "啾比嘟比是一個虛構的電視節目角色，在 '電影院' 這集中出現。",
   },
   {
     name: "迪哥 (Digger)",
     category: "其他角色",
     image: "img/digger.png",
+    description: "迪哥是小迪的哥哥，他在 '陸軍' 這集中出現。",
   },
   {
     name: "克蘿伊的媽媽 (Chloe's Mum)",
     category: "其他角色",
     image: "img/chloesmum.png",
+    description: "克蘿伊的媽媽是克蘿伊的母親，在幾集中短暫出現。",
   },
   {
     name: "柯尼利厄斯 (Cornelius)",
     category: "其他角色",
     image: "img/cornelius.png",
+    description:
+      "柯尼利厄斯是嘟嘟的父親，他在多集中出現，經營著一個太妃糖蘋果攤位。",
   },
   {
     name: "顧客 (Customer)",
     category: "其他角色",
     image: "img/customer.png",
+    description: "顧客是在各種場景中出現的路人角色。",
   },
   {
     name: "標價機男孩 (Docket Boy)",
     category: "其他角色",
     image: "img/docketboy.png",
+    description: "標價機男孩是超市的一名年輕員工，在 '超市' 這集中出現。",
   },
   {
     name: "醫生 (Doctor, from Baby Race)",
     category: "其他角色",
     image: "img/doctorbabyrace.png",
+    description: "這位醫生在 '嬰兒賽跑' 這集中出現，幫助布麗學習走路。",
   },
   {
     name: "醫生 (Doctor, from Bumpy and the Wise Old Wolfhound)",
     category: "其他角色",
     image: "img/doctorbumpyandthewiseoldwolfhound.png",
+    description: "這位醫生在 '顛簸和聰明的老獵犬' 這集中出現。",
   },
   {
     name: "醫生 (Doctor, from Exercise)",
     category: "其他角色",
     image: "img/doctorexercise.png",
+    description: "這位醫生在 '運動' 這集中出現，鼓勵班迪多運動。",
   },
   {
     name: "朵莉 (Doreen)",
     category: "其他角色",
     image: "img/doreen.png",
+    description: "朵莉是布麗和賓果的鄰居，她在 '鄰居' 這集中出現。",
   },
   {
     name: "克蘿伊的爸爸 (Chloe's Dad)",
     category: "其他角色",
     image: "img/frank.png",
+    description: "克蘿伊的爸爸是克蘿伊的父親，在幾集中短暫出現。",
   },
   {
     name: "道吉 (Dougie)",
     category: "其他角色",
     image: "img/dougie.png",
+    description: "道吉是布麗的一個朋友，在 '軍營' 這集中出現。",
   },
   {
     name: "道吉的媽媽 (Dougie's Mum)",
     category: "其他角色",
     image: "img/dougiesmum.png",
+    description: "道吉的媽媽是道吉的母親，在 '軍營' 這集中短暫出現。",
   },
   {
     name: "達斯蒂 (Dusty)",
     category: "其他角色",
     image: "img/dusty.png",
+    description: "達斯蒂是小迪的妹妹，在 '陸軍' 這集中出現。",
   },
   {
     name: "員工 (Employee)",
     category: "其他角色",
     image: "img/employee.png",
+    description: "員工是在各種場景中出現的工作人員角色。",
   },
   {
     name: "溫妮爸爸 (Winnie's Dad)",
     category: "其他角色",
     image: "img/fido.png",
+    description: "溫妮爸爸是溫妮的父親，在 '舞會' 這集中出現。",
   },
   {
     name: "飛狐小子 (Flying Fox Kid)",
     category: "其他角色",
     image: "img/flyingfoxkid.png",
+    description: "飛狐小子是一個在遊樂場出現的孩子，在 '遊樂場' 這集中出現。",
   },
   {
     name: "法國背包客 (French Backpacker)",
     category: "其他角色",
     image: "img/frenchbackpacker.png",
+    description: "法國背包客是一位來自法國的遊客，在 '露營' 這集中出現。",
   },
   {
     name: "銀髮遊牧族 (Grey Nomads)",
     category: "其他角色",
     image: "img/greynomads.png",
+    description: "銀髮遊牧族是一群退休的旅行者，在 '露營' 這集中出現。",
   },
   {
     name: "魯伯特 (Gruber)",
     category: "其他角色",
     image: "img/gruber.png",
+    description: "魯伯特是一個在市集上賣德國香腸的小販，在 '市集' 這集中出現。",
   },
   {
     name: "魯伯特的爸爸 (Gruber's Dad)",
     category: "其他角色",
     image: "img/grubersdad.png",
+    description: "魯伯特的爸爸是魯伯特的父親，也在市集上幫忙賣德國香腸。",
   },
   {
     name: "哈利 (Harley)",
     category: "其他角色",
     image: "img/harley.png",
-    description: "賓果的同學",
+    description: "哈利是賓果的同學，在幼兒園的場景中經常出現。",
   },
   {
     name: "醫院小孩 (Hospital Kid)",
     category: "其他角色",
     image: "img/hospitalkid.png",
+    description: "醫院小孩是在 '醫院' 這集中出現的一個生病的孩子。",
   },
   {
     name: "醫院小孩的媽媽 (Hospital Kid's Mum)",
     category: "其他角色",
     image: "img/hospitalkidsmum.png",
+    description: "醫院小孩的媽媽是醫院小孩的母親，在 '醫院' 這集中陪伴孩子。",
   },
   {
     name: "冰淇淋女士 (Ice Cream Lady)",
     category: "其他角色",
     image: "img/icecreamlady.png",
+    description: "冰淇淋女士是在公園賣冰淇淋的小販，在多個戶外場景中出現。",
   },
   {
     name: "小英的媽媽 (Indy's Mum)",
     category: "其他角色",
     image: "img/indysmum.png",
+    description: "小英的媽媽是小英的母親，她在市集上經營一個無麩質蛋糕攤位。",
   },
   {
     name: "傑克的爸爸 (Jack's Dad)",
     category: "其他角色",
     image: "img/jacksdad.png",
+    description: "傑克的爸爸是傑克的父親，在 '陸軍' 這集中出現。",
   },
   {
-    name: "傑克的媽 (Jack's Mum)",
+    name: "傑克的媽媽 (Jack's Mum)",
     category: "其他角色",
     image: "img/jacksmum.png",
+    description: "傑克的媽媽是傑克的母親，在多集中短暫出現。",
   },
   {
     name: "傑斯柏 (Jasper G.)",
     category: "其他角色",
     image: "img/jasperg.png",
-    description: "賓果的同學",
+    description: "傑斯柏是賓果的同學，在幼兒園的場景中經常出現。",
   },
   {
     name: "傑斯柏的媽媽 (Jasper G.'s Mum)",
     category: "其他角色",
     image: "img/jaspergsmum.png",
+    description: "傑斯柏的媽媽是傑斯柏的母親，在幾集中短暫出現。",
   },
   {
     name: "小傑 (Jasper W.)",
     category: "其他角色",
     image: "img/jasperw.png",
-    description: "賓果的同學",
+    description: "小傑是賓果的另一位同學，也在幼兒園的場景中經常出現。",
   },
   {
     name: "小路的爸爸 (Jean-Luc's Dad)",
     category: "其他角色",
     image: "img/jeanlucsdad.png",
+    description: "小路的爸爸是小路的父親，在 '露營' 這集中出現。",
   },
   {
     name: "傑瑞李 (Jerry Lee)",
@@ -816,7 +878,7 @@ const characters = [
 
 // 在 characters 數組中，找到並刪除 Sheila 的條目
 const filteredCharacters = characters.filter(
-  (character) => character.name !== "��拉 (Sheila)"
+  (character) => character.name !== "拉 (Sheila)"
 );
 
 // 如果 Sheila 有其他可能的名稱變體，也應該一併刪除，例如：
@@ -893,9 +955,6 @@ function openModal(character) {
     <img src="${character.image}" alt="${character.name}">
     <div class="character-details">
       <h2>${character.name}</h2>
-      <p><strong>類別:</strong> <span class="category-tag">${
-        character.category
-      }</span></p>
       ${
         character.description
           ? `<p><strong>描述:</strong> ${character.description}</p>`
